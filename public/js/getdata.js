@@ -389,7 +389,7 @@ jQuery(document).ready(function () {
 
     // datatable kategori
     var datakategori = $('#dataCat').DataTable({
-        
+
         "processing": true,
         "ajax": "/getkategori",
         "order": []
@@ -468,12 +468,6 @@ jQuery(document).ready(function () {
     $(document).on('submit', '#formeditcat', function (event) {
         event.preventDefault();
         var nama_kategori = $('#name').val();
-        var extension = $('#icone').val().split('.').pop().toLowerCase();
-        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-            alert("Invalid Image");
-            $('#user_image').val('');
-            return false;
-        }
 
         if (nama_kategori != '') {
             $.ajax({

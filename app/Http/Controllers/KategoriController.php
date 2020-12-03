@@ -61,6 +61,7 @@ class KategoriController extends Controller
         } else {
             $output['icon_kategori'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
         }
+        $output['name_icon'] = $data->icon_kategori;
         echo json_encode($output);
     }
 
@@ -68,14 +69,22 @@ class KategoriController extends Controller
     public function editCat(Request $request)
     {
         if ($_POST["action"] == "Edit") {
-            $imageName = $request->icon_kategori->getClientOriginalName();
-            $request->icon_kategori->move(public_path('image/icon'), $imageName);
-            $idkategori = $request->id;
-            $kategori = Kategori::find($idkategori);
-            $kategori->nama_kategori = $request->nama_kategori;
-            $kategori->icon_kategori = $imageName;
-            $kategori->save();
-            echo 'Data Updated';
+            if ($request->icon_kategori == null) {
+                $idkategori = $request->id;
+                $kategori = Kategori::find($idkategori);
+                $kategori->nama_kategori = $request->nama_kategori;
+                $kategori->save();
+                echo 'Data Updated';
+            } else {
+                $imageName = $request->icon_kategori->getClientOriginalName();
+                $request->icon_kategori->move(public_path('image/icon'), $imageName);
+                $idkategori = $request->id;
+                $kategori = Kategori::find($idkategori);
+                $kategori->nama_kategori = $request->nama_kategori;
+                $kategori->icon_kategori = $imageName;
+                $kategori->save();
+                echo 'Data Updated';
+            }
         }
     }
 
