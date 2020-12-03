@@ -287,12 +287,6 @@ jQuery(document).ready(function () {
         var tanggaldiskon = $('#tanggal_diskon').val();
         var tanggalakhir = $('#tanggal_berakhir').val();
         var status = $('#status').val();
-        var extension = $('#imge').val().split('.').pop().toLowerCase();
-        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-            alert("Invalid Image");
-            $('#user_image').val('');
-            return false;
-        }
 
         if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status) {
             $.ajax({

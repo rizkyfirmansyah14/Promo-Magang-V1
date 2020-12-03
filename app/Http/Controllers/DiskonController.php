@@ -92,23 +92,38 @@ class DiskonController extends Controller
     public function editDisc(Request $request)
     {
         if ($_POST["action"] == "Edit") {
-            $imageName = $request->image->getClientOriginalName();
-            $request->image->move(public_path('image'), $imageName);
-            $iddiskon = $request->id;
-            $diskon = Diskon::find($iddiskon);
-            $diskon->kategori = $request->kategori;
-            $diskon->type = $request->type;
-            $diskon->title = $request->title;
-            $diskon->deskripsi = $request->deskripsi;
-            $diskon->tanggal_diskon = $request->tanggal_diskon;
-            $diskon->tanggal_berakhir = $request->tanggal_berakhir;
-            $diskon->status = $request->status;
-            $diskon->image = $imageName;
-            $diskon->save();
-            echo 'Data Updated';
+            if ($request->image == null) {
+                $iddiskon = $request->id;
+                $diskon = Diskon::find($iddiskon);
+                $diskon->kategori = $request->kategori;
+                $diskon->type = $request->type;
+                $diskon->title = $request->title;
+                $diskon->deskripsi = $request->deskripsi;
+                $diskon->tanggal_diskon = $request->tanggal_diskon;
+                $diskon->tanggal_berakhir = $request->tanggal_berakhir;
+                $diskon->status = $request->status;
+                $diskon->save();
+                echo 'Data Updated';
+            } else {
+                $imageName = $request->image->getClientOriginalName();
+                $request->image->move(public_path('image'), $imageName);
+                $iddiskon = $request->id;
+                $diskon = Diskon::find($iddiskon);
+                $diskon->kategori = $request->kategori;
+                $diskon->type = $request->type;
+                $diskon->title = $request->title;
+                $diskon->deskripsi = $request->deskripsi;
+                $diskon->tanggal_diskon = $request->tanggal_diskon;
+                $diskon->tanggal_berakhir = $request->tanggal_berakhir;
+                $diskon->status = $request->status;
+                $diskon->image = $imageName;
+                $diskon->save();
+                echo 'Data Updated';
+            }
         }
     }
 
+    // function delete
     public function deleteDisc()
     {
         $diskon = Diskon::find($_POST["id"]);
