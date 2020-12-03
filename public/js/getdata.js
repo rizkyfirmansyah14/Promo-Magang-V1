@@ -383,7 +383,6 @@ jQuery(document).ready(function () {
 
     // datatable kategori
     var datakategori = $('#dataCat').DataTable({
-
         "processing": true,
         "ajax": "/getkategori",
         "order": []
@@ -550,4 +549,125 @@ jQuery(document).ready(function () {
 
     // END CRUD AJAX KATEGORI
 
+    // CRUD AJAX ROLE
+
+    // show modal add
+    jQuery('.addrole').on('click', function () {
+        $('#addRole').modal('show');
+    });
+
+    // datatable role
+    var datarole = $('#dataRole').DataTable({
+        "processing": true,
+        "ajax": "/getrole",
+        "order": []
+    });
+
+    // function add role
+    $(document).on('submit', '#formtambahrole', function (event) {
+        event.preventDefault();
+        var role = $('#nama_role').val();
+        var deskripsi = $('#dskrp').val();
+
+        if (role != '', deskripsi != '') {
+            $.ajax({
+                type: "post",
+                url: "/addrole",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Tambah Role',
+                        text: 'Anda Berhasil Menambah Role'
+                    });
+                    $('#formtambahrole')[0].reset();
+                    $('#addRole').modal('hide');
+                    datarole.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function get id kategori
+    $(document).on('click', '.editbtnrole', function () {
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "/getidrole",
+            type: "post",
+            data: {
+                id: id
+            },
+            dataType: "JSON",
+            success: function (data) {
+                $('#editRole').modal('show');
+                $('#role').val(data.role);
+                $('#deskripsi').val(data.deskripsi);
+                $('#id').val(id);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+
+    // function edit kategori
+    $(document).on('submit', '#formeditrole', function (event) {
+        event.preventDefault();
+        var role = $('#role').val();
+        var deskripsi = $('#deskripsi').val();
+
+        if (role != '', deskripsi != '') {
+            $.ajax({
+                type: "post",
+                url: "/editrole",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Edit Role',
+                        text: 'Anda Berhasil Mengedit Role'
+                    });
+                    $('#formeditrole')[0].reset();
+                    $('#editRole').modal('hide');
+                    datarole.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // END CRUD AJAX ROLE
 });

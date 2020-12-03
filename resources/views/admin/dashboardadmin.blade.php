@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countdiskon}}</b></h2>
-                                        <span>items active for slider</span>
+                                        <span>active items slider</span>
                                     </div>
                                 </div>
                                 <div class="overview-chart">

@@ -64,7 +64,7 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Category</label>
+                        <label>Category Discount</label>
                         <select class="custom-select" name="kategori" id="ktgr">
                             <option selected>Select Category</option>
                             @foreach($kategori as $u)
@@ -133,7 +133,7 @@
                         <span id="image"></span>
                     </div>
                     <div class="form-group">
-                        <label>Category</label>
+                        <label>Category Discount</label>
                         <select class="custom-select" name="kategori" id="kategori">
                             <option selected>Select Category</option>
                             @foreach($kategori as $u)

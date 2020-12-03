@@ -139,7 +139,7 @@
                              <a href="{{ route('datauser')}}">Data User</a>
                          </li>
                          <li>
-                             <a href="register.html">Data Role</a>
+                             <a href="{{ route('datarole')}}">Data Role</a>
                          </li>
                      </ul>
                  </li>
@@ -149,7 +149,7 @@
                  </li>
                  <li class="{{ Request::is('datakategori') ? 'active' : '' }}">
                      <a href="{{ route('datakategori')}}">
-                         <i class="fas fa-clipboard-list"></i>Category</a>
+                         <i class="fas fa-clipboard-list"></i>Category Discount</a>
                  </li>
                  <li class="{{ Request::is('items') ? 'active' : '' }}">
                      <a href="form.html">

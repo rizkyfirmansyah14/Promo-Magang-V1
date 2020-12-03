@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Kategori;
 use App\User;
+use App\Role;
 use App\Diskon;
 use Carbon\Carbon;
 
@@ -29,7 +30,11 @@ class AdminController extends Controller
         $kategori = Kategori::get();
         $kategoricount = $kategori->count();
 
-        return view('admin.dashboardadmin', ['countuser' => $userscount, 'countkategori' => $kategoricount, 'countdiskon' => $diskoncount, 'discon' => $todaydiskon]);
+        // count role
+        $role = Role::get();
+        $roleAcount = $role->count();
+
+        return view('admin.dashboardadmin', ['countuser' => $userscount, 'countkategori' => $kategoricount, 'countdiskon' => $diskoncount, 'discon' => $todaydiskon, 'countrole' => $roleAcount]);
     }
 
     public function viewUser()
@@ -46,5 +51,10 @@ class AdminController extends Controller
     public function viewCat()
     {
         return view('admin.datakategori');
+    }
+
+    public function viewRole()
+    {
+        return view('admin.datarole');
     }
 }
