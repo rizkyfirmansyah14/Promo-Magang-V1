@@ -22,7 +22,7 @@ class DiskonController extends Controller
             $tbody[] = $value['deskripsi'];
             $tbody[] = $value['tanggal_diskon'];
             $tbody[] = $value['tanggal_berakhir'];
-            $img = "<img style='width: 100%;' src='image/" . $value['image'] . "' /></a>";
+            $img = "<img style='width: 100%;' src='/image/" . $value['image'] . "' /></a>";
             $tbody[] = $img;
             if ($value['status'] == "open") {
                 $tbody[] = "<a style='color: green'>open</a>";
@@ -81,7 +81,7 @@ class DiskonController extends Controller
         $output['tanggal_berakhir'] = $data->tanggal_berakhir;
         $output['status'] = $data->status;
         if ($data->image != '') {
-            $output['image'] = '<img style="width: 100%;" src="image/' . $data->image . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->image . '"/>';
+            $output['image'] = '<img style="width: 100%;" src="/image/' . $data->image . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->image . '"/>';
         } else {
             $output['image'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
         }

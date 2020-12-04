@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KategoriController extends Controller
 {
@@ -15,7 +16,7 @@ class KategoriController extends Controller
             $tbody = array();
             $tbody[] = $value['id'];
             $tbody[] = $value['nama_kategori'];
-            $img = "<img style='width: 90%;' src='image/icon/" . $value['icon_kategori'] . "' /></a>";
+            $img = "<img style='width: 90%;' src='/image/icon/" . $value['icon_kategori'] . "' /></a>";
             $tbody[] = $img;
             $button =
                 "<div class='table-data-feature'>
@@ -40,7 +41,7 @@ class KategoriController extends Controller
     public function addCat(Request $request)
     {
         if ($_POST["action"] == "Add") {
-            $imageName = $request->icon_kategori->getClientOriginalName();
+            $imageName = $request->icon_kategori->getClientOriginalName(Str::random(10));
             $request->icon_kategori->move(public_path('image/icon'), $imageName);
             $kategori = new Kategori();
             $kategori->nama_kategori = $request->nama_kategori;
@@ -57,7 +58,7 @@ class KategoriController extends Controller
         $data = Kategori::find($_POST["id"]);
         $output['nama_kategori'] = $data->nama_kategori;
         if ($data->icon_kategori != '') {
-            $output['icon_kategori'] = '<img style="width: 100%;" src="image/icon/' . $data->icon_kategori . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->icon_kategori . '"/>';
+            $output['icon_kategori'] = '<img style="width: 100%;" src="/image/icon/' . $data->icon_kategori . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->icon_kategori . '"/>';
         } else {
             $output['icon_kategori'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
         }
