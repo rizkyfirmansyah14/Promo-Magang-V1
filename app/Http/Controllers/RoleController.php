@@ -39,10 +39,10 @@ class RoleController extends Controller
     public function addRole(Request $request)
     {
         if ($_POST["action"] == "Add") {
-            $kategori = new Role();
-            $kategori->nama_kategori = $request->role;
-            $kategori->icon_kategori = $request->deskripsi;
-            $kategori->save();
+            $role = new Role();
+            $role->role = $request->role;
+            $role->deskripsi = $request->deskripsi;
+            $role->save();
             echo 'Data Inserted';
         }
     }

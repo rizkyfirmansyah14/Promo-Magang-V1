@@ -33,9 +33,17 @@
                      <a href="{{ route('datakategori')}}">
                          <i class="fas fa-clipboard-list"></i>Category Discount</a>
                  </li>
-                 <li class="{{ Request::is('items') ? 'active' : '' }}">
-                     <a href="form.html">
+                 <li class="has-sub">
+                     <a class="js-arrow" href="#">
                          <i class="far fa-check-square"></i>Items Slider</a>
+                     <ul class="list-unstyled navbar__sub-list js-sub-list">
+                         <li>
+                             <a href="{{ route('datauser')}}">Top Promo Slider</a>
+                         </li>
+                         <li>
+                             <a href="{{ route('datarole')}}">Retailer Slider</a>
+                         </li>
+                     </ul>
                  </li>
                  @else
                  <li class="{{ Request::is('dashboard') ? 'active' : '' }} has-sub">

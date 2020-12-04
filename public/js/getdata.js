@@ -206,6 +206,7 @@ jQuery(document).ready(function () {
         var tanggaldiskon = $('#tgldisc').val();
         var tanggalakhir = $('#tglakhir').val();
         var status = $('#sts').val();
+        var price = $('#prc').val();
         var extension = $('#img').val().split('.').pop().toLowerCase();
         if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
             alert("Invalid Image");
@@ -213,7 +214,7 @@ jQuery(document).ready(function () {
             return false;
         }
 
-        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '') {
+        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '' && price != '') {
             $.ajax({
                 type: "post",
                 url: "adddiskon",
@@ -268,6 +269,7 @@ jQuery(document).ready(function () {
                 $('#tanggal_diskon').val(data.tanggal_diskon);
                 $('#tanggal_berakhir').val(data.tanggal_berakhir);
                 $('#status').val(data.status);
+                $('#price').val(data.price);
                 $('#id').val(id);
                 $('#image').html(data.image);
             },
@@ -287,8 +289,9 @@ jQuery(document).ready(function () {
         var tanggaldiskon = $('#tanggal_diskon').val();
         var tanggalakhir = $('#tanggal_berakhir').val();
         var status = $('#status').val();
+        var price = $('#price').val();
 
-        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status) {
+        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status && price !='') {
             $.ajax({
                 type: "post",
                 url: "editdiskon",

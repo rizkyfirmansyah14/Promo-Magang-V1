@@ -29,6 +29,7 @@ class DiskonController extends Controller
             } else {
                 $tbody[] = "<a style='color: red'>close</a>";
             }
+            $tbody[] = "Rp." . $value['price'];
             $button =
                 "<div class='table-data-feature'>
                 <button class='item editbtndisc' id=" . $value['id'] . " title=Edit'>
@@ -62,6 +63,7 @@ class DiskonController extends Controller
             $diskon->tanggal_diskon = $request->tanggal_diskon;
             $diskon->tanggal_berakhir = $request->tanggal_berakhir;
             $diskon->status = $request->status;
+            $diskon->price = $request->price;
             $diskon->image = $imageName;
             $diskon->save();
             echo 'Data Inserted';
@@ -80,6 +82,7 @@ class DiskonController extends Controller
         $output['tanggal_diskon'] = $data->tanggal_diskon;
         $output['tanggal_berakhir'] = $data->tanggal_berakhir;
         $output['status'] = $data->status;
+        $output['price'] = $data->price;
         if ($data->image != '') {
             $output['image'] = '<img style="width: 100%;" src="/image/' . $data->image . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->image . '"/>';
         } else {
@@ -102,6 +105,7 @@ class DiskonController extends Controller
                 $diskon->tanggal_diskon = $request->tanggal_diskon;
                 $diskon->tanggal_berakhir = $request->tanggal_berakhir;
                 $diskon->status = $request->status;
+                $diskon->price = $request->price;
                 $diskon->save();
                 echo 'Data Updated';
             } else {
@@ -116,6 +120,7 @@ class DiskonController extends Controller
                 $diskon->tanggal_diskon = $request->tanggal_diskon;
                 $diskon->tanggal_berakhir = $request->tanggal_berakhir;
                 $diskon->status = $request->status;
+                $diskon->price = $request->price;
                 $diskon->image = $imageName;
                 $diskon->save();
                 echo 'Data Updated';

@@ -3,7 +3,7 @@
          <div class="section__content section__content--p30">
              <div class="container-fluid">
                  <div class="header-wrap">
-                     <div class="header-button" style="margin-left: 80%;">
+                     <div class="header-button" style="position: absolute; right: 25px;">
                          <div class="account-wrap">
                              <div class="account-item clearfix js-item-menu">
                                  <div class="content">

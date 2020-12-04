@@ -28,6 +28,7 @@
                                         <th>discount is over</th>
                                         <th>image</th>
                                         <th>status</th>
+                                        <th>price</th>
                                         <th>action</th>
                                     </tr>
                                 </thead>
@@ -93,17 +94,14 @@
                         <input type="date" name="tanggal_berakhir" id="tglakhir" class="form-control">
                     </div>
                     <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" name="price" id="prc" class="form-control" placeholder="Input The Price">
+                    </div>
+                    <div class="form-group">
                         <label>Image</label>
                         <input type="file" name="image" id="img" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select class="custom-select" name="status" id="sts">
-                            <option selected>Status</option>
-                            <option value="open">Open</option>
-                            <option value="closed">Closed</option>
-                        </select>
-                    </div>
+                    <input type="hidden" value="open" name="status" id="sts">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -160,6 +158,10 @@
                     <div class="form-group">
                         <label>Discount over</label>
                         <input type="date" name="tanggal_berakhir" id="tanggal_berakhir" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Input The Price">
                     </div>
                     <div class="form-group">
                         <label>Image</label>

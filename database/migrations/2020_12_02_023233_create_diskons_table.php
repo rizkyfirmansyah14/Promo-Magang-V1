@@ -22,6 +22,7 @@ class CreateDiskonsTable extends Migration
             $table->date('tanggal_diskon');
             $table->date('tanggal_berakhir');
             $table->string('image');
+            $table->integer('price');
             $table->string('status');
             $table->timestamps();
         });
