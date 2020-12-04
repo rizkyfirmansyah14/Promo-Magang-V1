@@ -13,6 +13,7 @@
 
 <!-- Bootstrap Core CSS -->
 <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
 
 <!-- Custom CSS -->
 <link href="asset/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -58,24 +59,19 @@
           <nav>
             <ul class="cd-primary-nav">
               <li class="active"> <a href="index.html">Home </a></li>
-              <li> <a href="about-us_01.html">About </a> </li>
+              <li> <a href="{{ url('/about') }}">About </a> </li>
               <li class="drop-menu"> <a href="#." class="title collapsed" data-toggle="collapse" data-target="#down-1"> shop </a>
                   <div class="collapse" id="down-1">
                     <div class="well">
                       <ul>
-                        <li> <a href="shop_01.html">Shop 1</a> </li>
-                        <li> <a href="{{ url('/shop') }}">Shop 2</a> </li>
-                        <li> <a href="shop_03.html">Shop 3</a> </li>
-                        <li> <a href="shop_04.html">Shop 4</a> </li>
-                        <li> <a href="product-detail_01.html">Product Detail 01</a> </li>
-                        <li> <a href="product-detail_02.html">Product Detail 02</a> </li>
-                        <li> <a href="shopping-cart.html">Shopping Cart</a> </li>
-                        <li> <a href="checkout.html">Checkout </a> </li>
+                        <li> <a href="{{ url('/shop') }}">Shop</a> </li>
+                        <li> <a href="{{ url('/detail_product') }}">Product Detail</a> </li>
+                        <li> <a href="{{ url('/shopping_cart') }}">Shopping Cart</a> </li>
+                        <li> <a href="{{ url('/checkout') }}">Checkout </a> </li>
                       </ul>
                     </div>
                   </div>
                 </li>
-              <li> <a href="blog-list_01.html"> Blog</a> </li>
               <li> <a href="contact.html"> contact</a> </li>
               </ul>
           </nav>
@@ -220,11 +216,19 @@
           <div class="new-arrival-list">
             <ul class="row">
 
+              @foreach($category as $c)
               <!-- SHOP_ITEMS -->
               <li class="col-md-6">
 
-           
+                <!-- SHOP ITEM 1 -->
+                <article> <img class="img-responsive rounded border border border-light" src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori" style="width: 555px; height: 470px;">
+                  <div class="position-center-center">
+                    <h4><a href="#.">{{$c->nama_kategori}}</a></h4>
+                    <a href="#." class="btn btn-small btn-round">MORE</a> </div>
+                </article>
+
               </li>
+              @endforeach
             </ul>
 
             <!-- SHOW MORE -->
@@ -245,10 +249,11 @@
           <!-- Popular Item Slide -->
           <div class="papular-block block-slide">
 
+          @foreach($promo as $promo)
             <!-- Item -->
             <div class="item">
               <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="asset/images/shop-3-img-1.jpg" alt="" > <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="" >
+              <div class="item-img"> <img class="img-1" src="asset/images/{{$c->nama_kategori}}" alt="" > <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="" >
                 <!-- Overlay -->
                 <div class="overlay">
                   <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
@@ -259,61 +264,13 @@
               <!-- Price -->
             </div>
 
-            <!-- Item -->
-            <div class="item">
-              <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="asset/images/shop-3-img-2.jpg" alt="" > <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="" >
-                <!-- Overlay -->
-                <div class="overlay">
-                  <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
-                </div>
-              </div>
-              <!-- Item Name -->
-              <div class="item-name"> <a href="#.">casual bag</a> </div>
-              <!-- Price -->
-            </div>
 
-            <!-- Item -->
-            <div class="item">
-              <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="asset/images/shop-3-img-3.jpg" alt="" > <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="" >
-                <!-- Overlay -->
-                <div class="overlay">
-                  <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
-                </div>
-              </div>
-              <!-- Item Name -->
-              <div class="item-name"> <a href="#.">watch</a> </div>
-              <!-- Price -->
-            </div>
-
-            <!-- Item -->
-            <div class="item">
-              <!-- Item img -->
-              <div class="item-img"> <img class="img-1" src="asset/images/shop-3-img-4.jpg" alt="" > <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="" >
-                <!-- Overlay -->
-                <div class="overlay">
-                  <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
-                </div>
-              </div>
-              <!-- Item Name -->
-              <div class="item-name"> <a href="#.">SHOE</a> </div>
-              <!-- Price -->
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SPECIALS OFFERS -->
-      <section class="special-offers">
-        <div class="container">
-          <div class="col-md-8 center-block">
-            <h4>special</h4>
-            <h1 class="extra-huge-text"> women’s
-              sale </h1>
-            <a href="#." class="btn btn-round margin-top-50"> SHOP NOW</a> </div>
-        </div>
-      </section>
+
+
 
       <!-- About -->
       <section class="small-about padding-top-150 padding-bottom-150">
