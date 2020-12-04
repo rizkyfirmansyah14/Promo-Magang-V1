@@ -200,7 +200,7 @@ jQuery(document).ready(function () {
     $(document).on('submit', '#formtambahdisc', function (event) {
         event.preventDefault();
         var kategori = $('#ktgr').val();
-        var type = $('#typ').val();
+        var kategoribarang = $('#ktbarang').val();
         var title = $('#tlt').val();
         var deskripsi = $('#dskrp').val();
         var tanggaldiskon = $('#tgldisc').val();
@@ -214,7 +214,7 @@ jQuery(document).ready(function () {
             return false;
         }
 
-        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '' && price != '') {
+        if (kategori != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '' && price != '' && kategoribarang != '') {
             $.ajax({
                 type: "post",
                 url: "adddiskon",
@@ -262,8 +262,8 @@ jQuery(document).ready(function () {
             dataType: "JSON",
             success: function (data) {
                 $('#editDisc').modal('show');
-                $('#kategori').val(data.kategori);
-                $('#type').val(data.type);
+                $('#kategori').val(data.kategori_diskon);
+                $('#kategoribarang').val(data.kategori_barang);
                 $('#title').val(data.title);
                 $('#deskripsi').val(data.deskripsi);
                 $('#tanggal_diskon').val(data.tanggal_diskon);
@@ -283,7 +283,7 @@ jQuery(document).ready(function () {
     $(document).on('submit', '#formeditdisc', function (event) {
         event.preventDefault();
         var kategori = $('#kategori').val();
-        var type = $('#type').val();
+        var kategoribarang = $('#kategoribarang').val();
         var title = $('#title').val();
         var deskripsi = $('#deskripsi').val();
         var tanggaldiskon = $('#tanggal_diskon').val();
@@ -291,7 +291,7 @@ jQuery(document).ready(function () {
         var status = $('#status').val();
         var price = $('#price').val();
 
-        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status && price != '') {
+        if (kategori != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '' && price != '' && kategoribarang != '') {
             $.ajax({
                 type: "post",
                 url: "editdiskon",
@@ -566,7 +566,7 @@ jQuery(document).ready(function () {
         "order": []
     });
 
-    // function add kategori
+    // function add role
     $(document).on('submit', '#formtambahrole', function (event) {
         event.preventDefault();
         var role = $('#nama_role').val();
@@ -608,7 +608,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    // function get id kategori
+    // function get id role
     $(document).on('click', '.editbtnrole', function () {
         var id = $(this).attr("id");
         $.ajax({
@@ -630,7 +630,7 @@ jQuery(document).ready(function () {
         });
     });
 
-    // function edit kategori
+    // function edit role
     $(document).on('submit', '#formeditrole', function (event) {
         event.preventDefault();
         var role = $('#role').val();
@@ -847,5 +847,6 @@ jQuery(document).ready(function () {
             }
         });
     });
+
     // END CRUD AJAX KATEGORI BARANG
 });

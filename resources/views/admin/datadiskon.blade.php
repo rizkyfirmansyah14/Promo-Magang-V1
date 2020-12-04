@@ -20,7 +20,8 @@
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>category</th>
+                                        <th>category promo</th>
+                                        <th>category goods</th>
                                         <th>title</th>
                                         <th>description</th>
                                         <th>discount date</th>
@@ -74,7 +75,7 @@
                     </div>
                     <div class="form-group">
                         <label>Category Goods</label>
-                        <select class="custom-select" name="kategori" id="kategori">
+                        <select class="custom-select" name="kategori_barang" id="ktbarang">
                             <option selected>Select Category</option>
                             @foreach($kategoribarang as $b)
                             <option value="{{ $b->id}}">{{ $b->kategori_barang}}</option>
@@ -145,7 +146,7 @@
                     </div>
                     <div class="form-group">
                         <label>Category Goods</label>
-                        <select class="custom-select" name="kategori" id="kategori">
+                        <select class="custom-select" name="kategori_barang" id="kategoribarang">
                             <option selected>Select Category</option>
                             @foreach($kategoribarang as $b)
                             <option value="{{ $b->id}}">{{ $b->kategori_barang}}</option>

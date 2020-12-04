@@ -17,7 +17,9 @@ class DiskonController extends Controller
             foreach ($value->Kategori as $item) {
                 $tbody[] = $item->nama_kategori;
             }
-            $tbody[] = $value['type'];
+            foreach ($value->KategoriBarang as $item) {
+                $tbody[] = $item->kategori_barang;
+            }
             $tbody[] = $value['title'];
             $tbody[] = $value['deskripsi'];
             $tbody[] = $value['tanggal_diskon'];
@@ -56,8 +58,8 @@ class DiskonController extends Controller
             $imageName = $request->image->getClientOriginalName();
             $request->image->move(public_path('image'), $imageName);
             $diskon = new Diskon();
-            $diskon->kategori = $request->kategori;
-            $diskon->type = $request->type;
+            $diskon->kategori_diskon = $request->kategori;
+            $diskon->kategori_barang = $request->kategori_barang;
             $diskon->title = $request->title;
             $diskon->deskripsi = $request->deskripsi;
             $diskon->tanggal_diskon = $request->tanggal_diskon;
@@ -75,8 +77,8 @@ class DiskonController extends Controller
     {
         $output = array();
         $data = Diskon::find($_POST["id"]);
-        $output['kategori'] = $data->kategori;
-        $output['type'] = $data->type;
+        $output['kategori_diskon'] = $data->kategori_diskon;
+        $output['kategori_barang'] = $data->kategori_barang;
         $output['title'] = $data->title;
         $output['deskripsi'] = $data->deskripsi;
         $output['tanggal_diskon'] = $data->tanggal_diskon;
@@ -98,8 +100,8 @@ class DiskonController extends Controller
             if ($request->image == null) {
                 $iddiskon = $request->id;
                 $diskon = Diskon::find($iddiskon);
-                $diskon->kategori = $request->kategori;
-                $diskon->type = $request->type;
+                $diskon->kategori_diskon = $request->kategori;
+                $diskon->kategori_barang = $request->kategori_barang;
                 $diskon->title = $request->title;
                 $diskon->deskripsi = $request->deskripsi;
                 $diskon->tanggal_diskon = $request->tanggal_diskon;
@@ -113,8 +115,8 @@ class DiskonController extends Controller
                 $request->image->move(public_path('image'), $imageName);
                 $iddiskon = $request->id;
                 $diskon = Diskon::find($iddiskon);
-                $diskon->kategori = $request->kategori;
-                $diskon->type = $request->type;
+                $diskon->kategori_diskon = $request->kategori;
+                $diskon->kategori_barang = $request->kategori_barang;
                 $diskon->title = $request->title;
                 $diskon->deskripsi = $request->deskripsi;
                 $diskon->tanggal_diskon = $request->tanggal_diskon;
