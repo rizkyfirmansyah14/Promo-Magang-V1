@@ -14,6 +14,7 @@
                 </div>
             </div>
             <div class="row m-t-25">
+                @if(Auth::user()->id_role == 1)
                 <div class="col-sm-6 col-lg-3">
                     <a href="{{ route('datauser')}}">
                         <div class="overview-item overview-item--c1">
@@ -90,6 +91,46 @@
                         </div>
                     </a>
                 </div>
+                @else
+                <div class="col-sm-6 col-lg-3">
+                    <a href="{{ route('datadiskon')}}">
+                        <div class="overview-item overview-item--c2">
+                            <div class="overview__inner">
+                                <div class="overview-box clearfix">
+                                    <div class="icon">
+                                        <i class="fas fa-percent"></i>
+                                    </div>
+                                    <div class="text" style="margin-top: 10%;">
+                                        <h2><b>{{$countdiskon}}</b></h2>
+                                        <span>discounts available</span>
+                                    </div>
+                                </div>
+                                <div class="overview-chart">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="{{ route('datadiskon')}}">
+                        <div class="overview-item overview-item--c3">
+                            <div class="overview__inner">
+                                <div class="overview-box clearfix">
+                                    <div class="icon">
+                                        <i class="far fa-check-square"></i>
+                                    </div>
+                                    <div class="text" style="margin-top: 10%;">
+                                        <h2><b>{{$countdiskon}}</b></h2>
+                                        <span>active items slider</span>
+                                    </div>
+                                </div>
+                                <div class="overview-chart">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endif
             </div>
             <div class="row">
                 <div class="col-lg-12">
