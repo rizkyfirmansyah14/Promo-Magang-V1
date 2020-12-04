@@ -192,7 +192,7 @@ jQuery(document).ready(function () {
     // datatable discount
     var datadiskon = $('#dataDisc').DataTable({
         "processing": true,
-        "ajax": "/getdiskon",
+        "ajax": "getdiskon",
         "order": [],
     });
 
@@ -216,7 +216,7 @@ jQuery(document).ready(function () {
         if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status != '') {
             $.ajax({
                 type: "post",
-                url: "/adddiskon",
+                url: "adddiskon",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -253,7 +253,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '.editbtndisc', function () {
         var id = $(this).attr("id");
         $.ajax({
-            url: "/getiddiskon",
+            url: "getiddiskon",
             type: "post",
             data: {
                 id: id
@@ -291,7 +291,7 @@ jQuery(document).ready(function () {
         if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status) {
             $.ajax({
                 type: "post",
-                url: "/editdiskon",
+                url: "editdiskon",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -340,7 +340,7 @@ jQuery(document).ready(function () {
         }).then((result) => {
             if (result.value) {
                 $.ajax({
-                    url: "/deletediskon",
+                    url: "deletediskon",
                     type: "post",
                     beforeSend: function () {
                         swal({
@@ -384,7 +384,7 @@ jQuery(document).ready(function () {
     // datatable kategori
     var datakategori = $('#dataCat').DataTable({
         "processing": true,
-        "ajax": "/getkategori",
+        "ajax": "getkategori",
         "order": []
     });
 
@@ -402,7 +402,7 @@ jQuery(document).ready(function () {
         if (nama_kategori != '') {
             $.ajax({
                 type: "post",
-                url: "/addkategori",
+                url: "addkategori",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -439,7 +439,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '.editbtncat', function () {
         var id = $(this).attr("id");
         $.ajax({
-            url: "/getidkategori",
+            url: "getidkategori",
             type: "post",
             data: {
                 id: id
@@ -465,7 +465,7 @@ jQuery(document).ready(function () {
         if (nama_kategori != '') {
             $.ajax({
                 type: "post",
-                url: "/editkategori",
+                url: "editkategori",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -514,7 +514,7 @@ jQuery(document).ready(function () {
         }).then((result) => {
             if (result.value) {
                 $.ajax({
-                    url: "/deletekategori",
+                    url: "deletekategori",
                     type: "post",
                     beforeSend: function () {
                         swal({
@@ -559,7 +559,7 @@ jQuery(document).ready(function () {
     // datatable role
     var datarole = $('#dataRole').DataTable({
         "processing": true,
-        "ajax": "/getrole",
+        "ajax": "getrole",
         "order": []
     });
 
@@ -572,7 +572,7 @@ jQuery(document).ready(function () {
         if (role != '', deskripsi != '') {
             $.ajax({
                 type: "post",
-                url: "/addrole",
+                url: "addrole",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -609,7 +609,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '.editbtnrole', function () {
         var id = $(this).attr("id");
         $.ajax({
-            url: "/getidrole",
+            url: "getidrole",
             type: "post",
             data: {
                 id: id
@@ -636,7 +636,7 @@ jQuery(document).ready(function () {
         if (role != '', deskripsi != '') {
             $.ajax({
                 type: "post",
-                url: "/editrole",
+                url: "editrole",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
