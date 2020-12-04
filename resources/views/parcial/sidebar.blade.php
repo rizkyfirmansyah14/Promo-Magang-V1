@@ -29,19 +29,27 @@
                      <a href="{{ route('datadiskon')}}">
                          <i class="fas fa-percent"></i>Discount</a>
                  </li>
-                 <li class="{{ Request::is('datakategori') ? 'active' : '' }}">
-                     <a href="{{ route('datakategori')}}">
-                         <i class="fas fa-clipboard-list"></i>Category Discount</a>
+                 <li class="has-sub">
+                     <a class="js-arrow" href="#">
+                         <i class="fas fa-clipboard-list"></i>Category</a>
+                     <ul class="list-unstyled navbar__sub-list js-sub-list">
+                         <li>
+                             <a href="{{ route('datakategori')}}">Category Promo</a>
+                         </li>
+                         <li>
+                             <a href="{{ route('databarang')}}">Category Goods</a>
+                         </li>
+                     </ul>
                  </li>
                  <li class="has-sub">
                      <a class="js-arrow" href="#">
-                         <i class="far fa-check-square"></i>Items Slider</a>
+                         <i class="far fa-check-square"></i>Slider Settings</a>
                      <ul class="list-unstyled navbar__sub-list js-sub-list">
                          <li>
                              <a href="{{ route('datauser')}}">Top Promo Slider</a>
                          </li>
                          <li>
-                             <a href="{{ route('datarole')}}">Retailer Slider</a>
+                             <a href="{{ route('datarole')}}">Items Slider</a>
                          </li>
                      </ul>
                  </li>

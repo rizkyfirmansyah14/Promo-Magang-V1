@@ -6,22 +6,22 @@
 
 <div class="main-content">
     <div class="section__content section__content--p30">
-        <h2 class="title-1" style="margin-bottom: 30px;">Data Category Promo</h2>
+        <h2 class="title-1" style="margin-bottom: 30px;">Data Category Goods</h2>
         <div class="bg-white" style="padding-top: 2%; border-radius: 5px;">
             <div class="container-fluid">
-                <a type="button" href="#" class="au-btn au-btn-icon au-btn--green au-btn--small addkategori">
+                <a type="button" href="#" class="au-btn au-btn-icon au-btn--green au-btn--small addktbarang">
                     <i class="zmdi zmdi-plus"></i>add category
                 </a>
                 <div class="row m-t-30">
                     <div class="col-md-12">
                         <!-- DATA TABLE-->
                         <div class="table-responsive m-b-40">
-                            <table class="table table-borderless table-data3" id="dataCat">
+                            <table class="table table-borderless table-data3" id="dataKat">
                                 <thead>
                                     <tr>
                                         <th>id</th>
                                         <th>nama kategori</th>
-                                        <th>icon kategori</th>
+                                        <th>gambar kategori</th>
                                         <th>action</th>
                                     </tr>
                                 </thead>
@@ -45,7 +45,7 @@
 </div>
 
 <!-- Add Modal -->
-<div class="modal fade" id="addCat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addKat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -54,16 +54,16 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="formtambahcat" method="post">
+            <form id="formtambahkat" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class=" form-group">
                         <label>Category Name</label>
-                        <input type="text" name="nama_kategori" id="nme" class="form-control" placeholder="Enter Category Name">
+                        <input type="text" name="kategori_barang" id="kte" class="form-control" placeholder="Enter Category Name">
                     </div>
                     <div class="form-group">
-                        <label>Icon Category</label>
-                        <input type="file" name="icon_kategori" id="icon" class="form-control">
+                        <label>Images Category</label>
+                        <input type="file" name="gambar_kategori" id="gambar" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -77,7 +77,7 @@
 </div>
 
 <!-- Edit Modal -->
-<div class="modal fade" id="editCat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editKat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -86,7 +86,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="formeditcat" method="post">
+            <form id="formeditkat" method="post">
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
@@ -95,11 +95,11 @@
                     </div>
                     <div class=" form-group">
                         <label>Category Name</label>
-                        <input type="text" name="nama_kategori" id="name" class="form-control" placeholder="Enter Category Name">
+                        <input type="text" name="kategori_barang" id="kategori" class="form-control" placeholder="Enter Category Name">
                     </div>
                     <div class="form-group">
-                        <label>Icon Category</label>
-                        <input type="file" name="icon_kategori" id="icone" class="form-control">
+                        <label>Images Category</label>
+                        <input type="file" name="gambar_kategori" id="gambare" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">

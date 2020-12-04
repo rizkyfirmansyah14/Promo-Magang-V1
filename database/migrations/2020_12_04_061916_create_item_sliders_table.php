@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDiskonsTable extends Migration
+class CreateItemSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,13 @@ class CreateDiskonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('diskons', function (Blueprint $table) {
+        Schema::create('item_sliders', function (Blueprint $table) {
             $table->id();
-            $table->integer('kategori_diskon');
-            $table->integer('kategori_barang');
             $table->string('title');
+            $table->integer('kategori_barang');
             $table->string('deskripsi');
-            $table->date('tanggal_diskon');
-            $table->date('tanggal_berakhir');
-            $table->string('image');
             $table->integer('price');
-            $table->string('status');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -35,6 +31,6 @@ class CreateDiskonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diskons');
+        Schema::dropIfExists('item_sliders');
     }
 }

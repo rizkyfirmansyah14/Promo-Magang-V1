@@ -29,7 +29,7 @@ class DiskonController extends Controller
             } else {
                 $tbody[] = "<a style='color: red'>close</a>";
             }
-            $tbody[] = "Rp." . $value['price'];
+            $tbody[] = "Rp. " . $value['price'];
             $button =
                 "<div class='table-data-feature'>
                 <button class='item editbtndisc' id=" . $value['id'] . " title=Edit'>

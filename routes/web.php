@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return view('user.index-2');
 });
@@ -32,6 +33,7 @@ Route::get('/admin/datauser', 'AdminController@viewUser')->name('datauser');
 Route::get('/admin/datadiskon', 'AdminController@viewDisc')->name('datadiskon');
 Route::get('/admin/datakategori', 'AdminController@viewCat')->name('datakategori');
 Route::get('/admin/datarole', 'AdminController@viewRole')->name('datarole');
+Route::get('/admin/datakategoribarang', 'AdminController@viewKtBarang')->name('databarang');
 
 // Route CRUD user
 Route::get('/admin/getuser', 'UserController@dataUser')->name('getuser');
@@ -60,3 +62,10 @@ Route::post('/admin/addrole', 'RoleController@addRole');
 Route::post('/admin/getidrole', 'RoleController@getIdRole');
 Route::post('/admin/editrole', 'RoleController@editRole');
 Route::post('/admin/deleterole', 'RoleController@deleteRole');
+
+// Route CRUD kategori barang
+Route::get('/admin/getktbarang', 'KategoriBarangController@dataKat')->name('getktbarang');
+Route::post('/admin/addktbarang', 'KategoriBarangController@addKat')->name('addktbarang');
+Route::post('/admin/getidktbarang', 'KategoriBarangController@getIdKat')->name('getidktbarang');
+Route::post('/admin/editktbarang', 'KategoriBarangController@editKat')->name('editktbarang');
+Route::post('/admin/deletektbarang', 'KategoriBarangController@deleteKat')->name('deletektbarang');

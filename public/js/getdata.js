@@ -291,7 +291,7 @@ jQuery(document).ready(function () {
         var status = $('#status').val();
         var price = $('#price').val();
 
-        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status && price !='') {
+        if (kategori != '' && type != '' && title != '' && deskripsi != '' && tanggaldiskon != '' && tanggalakhir != '' && status && price != '') {
             $.ajax({
                 type: "post",
                 url: "editdiskon",
@@ -566,7 +566,7 @@ jQuery(document).ready(function () {
         "order": []
     });
 
-    // function add role
+    // function add kategori
     $(document).on('submit', '#formtambahrole', function (event) {
         event.preventDefault();
         var role = $('#nama_role').val();
@@ -673,4 +673,179 @@ jQuery(document).ready(function () {
     });
 
     // END CRUD AJAX ROLE
+
+
+    // CRUD AJAX KATEGORI BARANG
+
+    // show modal add
+    jQuery('.addktbarang').on('click', function () {
+        $('#addKat').modal('show');
+    });
+
+    // datatable kategori barang
+    var datakat = $('#dataKat').DataTable({
+        "processing": true,
+        "ajax": "getktbarang",
+        "order": []
+    });
+
+    // function add kategori barang
+    $(document).on('submit', '#formtambahkat', function (event) {
+        event.preventDefault();
+        var kategoribarang = $('#kte').val();
+        var extension = $('#gambar').val().split('.').pop().toLowerCase();
+        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert("Invalid Image");
+            $('#user_image').val('');
+            return false;
+        }
+
+        if (kategoribarang != '') {
+            $.ajax({
+                type: "post",
+                url: "addktbarang",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Tambah Kategori Barang',
+                        text: 'Anda Berhasil Menambah Kategori Barang'
+                    });
+                    $('#formtambahkat')[0].reset();
+                    $('#addKat').modal('hide');
+                    datakat.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function get id kategori
+    $(document).on('click', '.editbtnkat', function () {
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "getidktbarang",
+            type: "post",
+            data: {
+                id: id
+            },
+            dataType: "JSON",
+            success: function (data) {
+                $('#editKat').modal('show');
+                $('#kategori').val(data.kategori_barang);
+                $('#id').val(id);
+                $('#image').html(data.gambar_kategori);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+
+    // function edit kategori
+    $(document).on('submit', '#formeditkat', function (event) {
+        event.preventDefault();
+        var kategori_barang = $('#kategori').val();
+
+        if (kategori_barang != '') {
+            $.ajax({
+                type: "post",
+                url: "editktbarang",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Edit Category Goods',
+                        text: 'Anda Berhasil Mengedit Category Goods'
+                    });
+                    $('#formeditkat')[0].reset();
+                    $('#editKat').modal('hide');
+                    datakat.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function delete kategori barang
+    $(document).on('click', '.deletebtnkat', function () {
+        var id = $(this).attr("id");
+        swal({
+            title: 'Konfirmasi',
+            text: "Apakah anda yakin ingin menghapus ",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Hapus',
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            cancelButtonText: 'Tidak',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "deletektbarang",
+                    type: "post",
+                    beforeSend: function () {
+                        swal({
+                            title: 'Menunggu',
+                            html: 'Memproses data',
+                            onOpen: () => {
+                                swal.showLoading();
+                            }
+                        });
+                    },
+                    data: {
+                        id: id
+                    },
+                    success: function (data) {
+                        swal(
+                            'Hapus',
+                            'Berhasil Terhapus',
+                            'success'
+                        );
+                        datakat.ajax.reload(null, false);
+                    }
+                });
+            } else if (result.dismiss === swal.DismissReason.cancel) {
+                swal(
+                    'Batal',
+                    'Anda membatalkan penghapusan',
+                    'error'
+                );
+            }
+        });
+    });
+    // END CRUD AJAX KATEGORI BARANG
 });

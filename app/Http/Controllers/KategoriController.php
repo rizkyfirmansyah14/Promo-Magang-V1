@@ -41,7 +41,7 @@ class KategoriController extends Controller
     public function addCat(Request $request)
     {
         if ($_POST["action"] == "Add") {
-            $imageName = $request->icon_kategori->getClientOriginalName(Str::random(10));
+            $imageName = $request->icon_kategori->getClientOriginalName();
             $request->icon_kategori->move(public_path('image/icon'), $imageName);
             $kategori = new Kategori();
             $kategori->nama_kategori = $request->nama_kategori;
@@ -62,7 +62,6 @@ class KategoriController extends Controller
         } else {
             $output['icon_kategori'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
         }
-        $output['name_icon'] = $data->icon_kategori;
         echo json_encode($output);
     }
 

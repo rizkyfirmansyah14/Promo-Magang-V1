@@ -21,7 +21,6 @@
                                     <tr>
                                         <th>id</th>
                                         <th>category</th>
-                                        <th>type</th>
                                         <th>title</th>
                                         <th>description</th>
                                         <th>discount date</th>
@@ -74,8 +73,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Type</label>
-                        <input type="text" name="type" id="typ" class="form-control" placeholder="Enter Type">
+                        <label>Category Goods</label>
+                        <select class="custom-select" name="kategori" id="kategori">
+                            <option selected>Select Category</option>
+                            @foreach($kategoribarang as $b)
+                            <option value="{{ $b->id}}">{{ $b->kategori_barang}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class=" form-group">
                         <label>Title</label>
@@ -140,8 +144,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Type</label>
-                        <input type="text" name="type" id="type" class="form-control" placeholder="Enter Type">
+                        <label>Category Goods</label>
+                        <select class="custom-select" name="kategori" id="kategori">
+                            <option selected>Select Category</option>
+                            @foreach($kategoribarang as $b)
+                            <option value="{{ $b->id}}">{{ $b->kategori_barang}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class=" form-group">
                         <label>Title</label>

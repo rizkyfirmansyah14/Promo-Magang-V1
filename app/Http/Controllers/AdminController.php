@@ -6,6 +6,7 @@ use App\Kategori;
 use App\User;
 use App\Role;
 use App\Diskon;
+use App\KategoriBarang;
 use Carbon\Carbon;
 
 class AdminController extends Controller
@@ -44,8 +45,12 @@ class AdminController extends Controller
 
     public function viewDisc()
     {
+        // get kategori promo
         $kategory = Kategori::get();
-        return view('admin.datadiskon', ['kategori' => $kategory]);
+
+        // get kategori barang
+        $ktbarang = KategoriBarang::get();
+        return view('admin.datadiskon', ['kategori' => $kategory, 'kategoribarang' => $ktbarang]);
     }
 
     public function viewCat()
@@ -56,5 +61,10 @@ class AdminController extends Controller
     public function viewRole()
     {
         return view('admin.datarole');
+    }
+
+    public function viewKtBarang()
+    {
+        return view('admin.datakategoribarang');
     }
 }
