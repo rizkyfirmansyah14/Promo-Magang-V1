@@ -92,7 +92,7 @@ class KategoriController extends Controller
     public function deleteCat()
     {
         $kategori = Kategori::find($_POST["id"]);
-        unlink(public_path() . '/image/icon' . $kategori->icon_kategori);
+        unlink(public_path() . '/image/icon/' . $kategori->icon_kategori);
         $kategori->delete();
     }
 }
