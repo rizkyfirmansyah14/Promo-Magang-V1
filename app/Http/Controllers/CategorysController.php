@@ -15,9 +15,9 @@ class CategorysController extends Controller
      */
     public function index()
     {
-        $category = DB::table('diskons')->get();
+        $category = DB::table('kategoris')->get();
       
-        return view('home.index', compact('category'));
+        return view('user.home', compact('category'));
     }
 
     /**
