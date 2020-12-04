@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
     // datatable
     var datauser = $('#dataUser').DataTable({
         "processing": true,
-        "ajax": "/getuser",
+        "ajax": "getuser",
         "order": [],
     });
 
@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
         if (id_role != '' && name != '' && email != '' && password) {
             $.ajax({
                 type: "post",
-                url: "/adduser",
+                url: "adduser",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -69,7 +69,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '.editbtn', function () {
         var id = $(this).attr("id");
         $.ajax({
-            url: "/getiduser",
+            url: "getiduser",
             type: "post",
             data: {
                 id: id
@@ -100,7 +100,7 @@ jQuery(document).ready(function () {
         if (id_role != '' && name != '' && email != '' && password) {
             $.ajax({
                 type: "post",
-                url: "/edituser",
+                url: "edituser",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -149,7 +149,7 @@ jQuery(document).ready(function () {
         }).then((result) => {
             if (result.value) {
                 $.ajax({
-                    url: "/deleteuser",
+                    url: "deleteuser",
                     type: "post",
                     beforeSend: function () {
                         swal({
