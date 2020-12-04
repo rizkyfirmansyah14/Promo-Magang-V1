@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index-2');
-});
-
 Route::get('/shop', function () {
     return view('user/shop_02');
 });
@@ -61,7 +57,7 @@ Route::get('/admin/getrole', 'RoleController@dataRole')->name('getrole');
 Route::post('/admin/addrole', 'RoleController@addRole')->name('addrole');
 Route::post('/admin/getidrole', 'RoleController@getIdRole')->name('getidrole');
 Route::post('/admin/editrole', 'RoleController@editRole')->name('editrole');
-Route::post('/admin/deleterole', 'RoleController@deleteRole') - name('deleterole');
+Route::post('/admin/deleterole', 'RoleController@deleteRole')->name('deleterole');
 
 // Route CRUD kategori barang
 Route::get('/admin/getktbarang', 'KategoriBarangController@dataKat')->name('getktbarang');
