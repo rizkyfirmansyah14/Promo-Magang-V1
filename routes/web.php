@@ -92,18 +92,9 @@ Route::group(['middleware' => 'CheckRole:1'], function () {
 Route::group(['middleware' => 'CheckRole:2'], function () {
     // Route View
     Route::get('/admin/dashboard', 'AdminController@dashboardView')->name('dashboard');
-    Route::get('/admin/datauser', 'AdminController@viewUser')->name('datauser');
     Route::get('/admin/datadiskon', 'AdminController@viewDisc')->name('datadiskon');
     Route::get('/admin/datakategori', 'AdminController@viewCat')->name('datakategori');
-    Route::get('/admin/datarole', 'AdminController@viewRole')->name('datarole');
     Route::get('/admin/datakategoribarang', 'AdminController@viewKtBarang')->name('databarang');
-
-    // Route CRUD user
-    Route::get('/admin/getuser', 'UserController@dataUser')->name('getuser');
-    Route::post('/admin/adduser', 'UserController@addUser')->name('adduser');
-    Route::post('/admin/getiduser', 'UserController@getIdUser')->name('getiduser');
-    Route::post('/admin/edituser', 'UserController@editUser')->name('edituser');
-    Route::post('/admin/deleteuser', 'UserController@deleteUser')->name('deleteuser');
 
     // Route CRUD discount
     Route::get('/admin/getdiskon', 'DiskonController@dataDisc')->name('getdiskon');
@@ -118,13 +109,6 @@ Route::group(['middleware' => 'CheckRole:2'], function () {
     Route::post('/admin/getidkategori', 'KategoriController@getIdCat')->name('getidkategori');
     Route::post('/admin/editkategori', 'KategoriController@editCat')->name('editkategori');
     Route::post('/admin/deletekategori', 'KategoriController@deleteCat')->name('deletekategori');
-
-    // Route CRUD role
-    Route::get('/admin/getrole', 'RoleController@dataRole')->name('getrole');
-    Route::post('/admin/addrole', 'RoleController@addRole')->name('addrole');
-    Route::post('/admin/getidrole', 'RoleController@getIdRole')->name('getidrole');
-    Route::post('/admin/editrole', 'RoleController@editRole')->name('editrole');
-    Route::post('/admin/deleterole', 'RoleController@deleteRole')->name('deleterole');
 
     // Route CRUD kategori barang
     Route::get('/admin/getktbarang', 'KategoriBarangController@dataKat')->name('getktbarang');
