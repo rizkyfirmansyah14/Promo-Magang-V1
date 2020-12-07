@@ -68,8 +68,11 @@ class AdminController extends Controller
         return view('admin.datakategoribarang');
     }
 
-    public function adminLogin()
+    public function ViewPopular()
     {
-        return view('auth.login');
+        // get kategori barang
+        $ktbarang = KategoriBarang::get();
+
+        return view('admin.datapopular', ['kategoribarang' => $ktbarang]);
     }
 }

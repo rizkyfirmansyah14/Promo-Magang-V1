@@ -852,15 +852,177 @@ jQuery(document).ready(function () {
     // CRUD AJAX TOP PROMO
 
     // show modal add
-    jQuery('.addtop').on('click', function () {
-        $('#addTop').modal('show');
+    jQuery('.addpop').on('click', function () {
+        $('#addPop').modal('show');
     });
 
     // datatable top promo
-    var datakat = $('#dataTop').DataTable({
+    var datapop = $('#dataPop').DataTable({
         "processing": true,
         "ajax": "gettoppromo",
         "order": []
+    });
+
+    // function add top popular
+    $(document).on('submit', '#formtambahpop', function (event) {
+        event.preventDefault();
+        var title = $('#tlt').val();
+        var kategoribarang = $('#kte').val();
+        var extension = $('#gambar').val().split('.').pop().toLowerCase();
+        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert("Invalid Image");
+            $('#user_image').val('');
+            return false;
+        }
+
+        if (kategoribarang != '' && title != '') {
+            $.ajax({
+                type: "post",
+                url: "addtoppromo",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Tambah Popular Slider',
+                        text: 'Anda Berhasil Menambah Popular Slider'
+                    });
+                    $('#formtambahpop')[0].reset();
+                    $('#addPop').modal('hide');
+                    datapop.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function get id popular slider
+    $(document).on('click', '.editbtnpop', function () {
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "getidtoppromo",
+            type: "post",
+            data: {
+                id: id
+            },
+            dataType: "JSON",
+            success: function (data) {
+                $('#editPop').modal('show');
+                $('#title').val(data.title);
+                $('#kategori_barang').val(data.kategori_barang);
+                $('#id').val(id);
+                $('#image').html(data.image);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+
+    // function edit popular slider
+    $(document).on('submit', '#formeditpop', function (event) {
+        event.preventDefault();
+        var title = $('#tlt').val();
+        var kategoribarang = $('#kte').val();
+
+        if (kategoribarang != '' && title != '') {
+            $.ajax({
+                type: "post",
+                url: "edittoppromo",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Edit Top Promo',
+                        text: 'Anda Berhasil Mengedit Top Promo'
+                    });
+                    $('#formeditpop')[0].reset();
+                    $('#editPop').modal('hide');
+                    datapop.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function delete popular slider
+    $(document).on('click', '.deletebtnpop', function () {
+        var id = $(this).attr("id");
+        swal({
+            title: 'Konfirmasi',
+            text: "Apakah anda yakin ingin menghapus ",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Hapus',
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            cancelButtonText: 'Tidak',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "deletetoppromo",
+                    type: "post",
+                    beforeSend: function () {
+                        swal({
+                            title: 'Menunggu',
+                            html: 'Memproses data',
+                            onOpen: () => {
+                                swal.showLoading();
+                            }
+                        });
+                    },
+                    data: {
+                        id: id
+                    },
+                    success: function (data) {
+                        swal(
+                            'Hapus',
+                            'Berhasil Terhapus',
+                            'success'
+                        );
+                        datapop.ajax.reload(null, false);
+                    }
+                });
+            } else if (result.dismiss === swal.DismissReason.cancel) {
+                swal(
+                    'Batal',
+                    'Anda membatalkan penghapusan',
+                    'error'
+                );
+            }
+        });
     });
 
     // END CRUD AJAX TOP PROMO

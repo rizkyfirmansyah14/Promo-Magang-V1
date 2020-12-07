@@ -21,7 +21,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countuser}}</b></h2>
@@ -40,9 +40,9 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="fas fa-percent"></i>
+                                        <i class="fas fa-percent" style="font-size: 50px;"></i>
                                     </div>
-                                    <div class="text" style="margin-top: 10%;">
+                                    <div class=" text" style="margin-top: 10%;">
                                         <h2><b>{{$countdiskon}}</b></h2>
                                         <span>discounts available</span>
                                     </div>
@@ -59,7 +59,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="far fa-check-square"></i>
+                                        <i class="far fa-check-square" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countdiskon}}</b></h2>
@@ -78,7 +78,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="fas fa-clipboard-list"></i>
+                                        <i class="fas fa-clipboard-list" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countkategori}}</b></h2>
@@ -98,7 +98,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="fas fa-percent"></i>
+                                        <i class="fas fa-percent" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countdiskon}}</b></h2>
@@ -117,7 +117,7 @@
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
                                     <div class="icon">
-                                        <i class="far fa-check-square"></i>
+                                        <i class="far fa-check-square" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
                                         <h2><b>{{$countdiskon}}</b></h2>

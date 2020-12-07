@@ -10,4 +10,9 @@ class KategoriBarang extends Model
     {
         return $this->belongsTo('App\Diskon');
     }
+
+    public function PopularSlider()
+    {
+        return $this->belongsTo('App\PopularSlider');
+    }
 }

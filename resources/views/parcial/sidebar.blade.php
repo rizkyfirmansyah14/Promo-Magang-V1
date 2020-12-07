@@ -9,7 +9,7 @@
          <nav class="navbar-sidebar">
              <ul class="list-unstyled navbar__list">
                  @if(Auth::user()->id_role == 1)
-                 <li class="{{ Request::is('dashboard') ? 'active' : '' }} has-sub">
+                 <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }} has-sub">
                      <a class="js-arrow" href="{{ route('dashboard')}}">
                          <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                  </li>
@@ -25,7 +25,7 @@
                          </li>
                      </ul>
                  </li>
-                 <li class="{{ Request::is('datadiskon') ? 'active' : '' }}">
+                 <li class="{{ Request::is('admin/datadiskon') ? 'active' : '' }}">
                      <a href="{{ route('datadiskon')}}">
                          <i class="fas fa-percent"></i>Discount</a>
                  </li>
@@ -41,22 +41,22 @@
                          </li>
                      </ul>
                  </li>
-                 <li class="{{ Request::is('toppromo') ? 'active' : '' }}">
-                     <a href="form.html">
+                 <li class="{{ Request::is('admin/datapopular') ? 'active' : '' }}">
+                     <a href="{{ route('datapopular')}}">
                          <i class="far fa-check-square"></i>Top Promo Slider</a>
                  </li>
                  @else
-                 <li class="{{ Request::is('dashboard') ? 'active' : '' }} has-sub">
+                 <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }} has-sub">
                      <a class="js-arrow" href="{{ route('dashboard')}}">
                          <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                  </li>
-                 <li class="{{ Request::is('datadiskon') ? 'active' : '' }}">
+                 <li class="{{ Request::is('admin/datadiskon') ? 'active' : '' }}">
                      <a href="{{ route('datadiskon')}}">
                          <i class="fas fa-percent"></i>Discount</a>
                  </li>
-                 <li class="{{ Request::is('items') ? 'active' : '' }}">
-                     <a href="form.html">
-                         <i class="far fa-check-square"></i>Items Slider</a>
+                 <li class="{{ Request::is('admin/datapopular') ? 'active' : '' }}">
+                     <a href="{{ route('datapopular')}}">
+                         <i class="far fa-check-square"></i>Top Promo Slider</a>
                  </li>
                  @endif
              </ul>
