@@ -54,7 +54,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="{{ route('datadiskon')}}">
+                    <a href="{{ route('datapopular')}}">
                         <div class="overview-item overview-item--c3">
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
@@ -62,7 +62,7 @@
                                         <i class="far fa-check-square" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
-                                        <h2><b>{{$countdiskon}}</b></h2>
+                                        <h2><b>{{$countslider}}</b></h2>
                                         <span>active items slider</span>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <a href="{{ route('datadiskon')}}">
+                    <a href="{{ route('datapopular')}}">
                         <div class="overview-item overview-item--c3">
                             <div class="overview__inner">
                                 <div class="overview-box clearfix">
@@ -120,7 +120,7 @@
                                         <i class="far fa-check-square" style="font-size: 50px;"></i>
                                     </div>
                                     <div class="text" style="margin-top: 10%;">
-                                        <h2><b>{{$countdiskon}}</b></h2>
+                                        <h2><b>{{$countslider}}</b></h2>
                                         <span>active items slider</span>
                                     </div>
                                 </div>

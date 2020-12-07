@@ -7,6 +7,7 @@ use App\User;
 use App\Role;
 use App\Diskon;
 use App\KategoriBarang;
+use App\PopularSlider;
 use Carbon\Carbon;
 
 class AdminController extends Controller
@@ -35,7 +36,11 @@ class AdminController extends Controller
         $role = Role::get();
         $roleAcount = $role->count();
 
-        return view('admin.dashboardadmin', ['countuser' => $userscount, 'countkategori' => $kategoricount, 'countdiskon' => $diskoncount, 'discon' => $todaydiskon, 'countrole' => $roleAcount]);
+        // count slider
+        $slider = PopularSlider::get();
+        $slidercount = $slider->count();
+
+        return view('admin.dashboardadmin', ['countuser' => $userscount, 'countkategori' => $kategoricount, 'countdiskon' => $diskoncount, 'discon' => $todaydiskon, 'countrole' => $roleAcount, 'countslider' => $slidercount]);
     }
 
     public function viewUser()
