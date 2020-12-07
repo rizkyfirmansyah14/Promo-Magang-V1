@@ -62,6 +62,7 @@
                         <button class="login100-form-btn">
                             Login
                         </button>
+                        <a href="{{ route('register')}}" style="margin-top: 30%;">Create a new account!</a>
                     </div>
                 </form>
 
