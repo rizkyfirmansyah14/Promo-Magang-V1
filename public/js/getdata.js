@@ -674,7 +674,6 @@ jQuery(document).ready(function () {
 
     // END CRUD AJAX ROLE
 
-
     // CRUD AJAX KATEGORI BARANG
 
     // show modal add
@@ -849,4 +848,10 @@ jQuery(document).ready(function () {
     });
 
     // END CRUD AJAX KATEGORI BARANG
+
+    // CRUD AJAX TOP PROMO
+
+
+
+    // END CRUD AJAX TOP PROMO
 });
