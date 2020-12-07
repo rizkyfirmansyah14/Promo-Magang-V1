@@ -41,17 +41,9 @@
                          </li>
                      </ul>
                  </li>
-                 <li class="has-sub">
-                     <a class="js-arrow" href="#">
-                         <i class="far fa-check-square"></i>Slider Settings</a>
-                     <ul class="list-unstyled navbar__sub-list js-sub-list">
-                         <li>
-                             <a href="{{ route('datauser')}}">Top Promo Slider</a>
-                         </li>
-                         <li>
-                             <a href="{{ route('datarole')}}">Items Slider</a>
-                         </li>
-                     </ul>
+                 <li class="{{ Request::is('toppromo') ? 'active' : '' }}">
+                     <a href="form.html">
+                         <i class="far fa-check-square"></i>Top Promo Slider</a>
                  </li>
                  @else
                  <li class="{{ Request::is('dashboard') ? 'active' : '' }} has-sub">

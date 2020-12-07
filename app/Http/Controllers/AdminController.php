@@ -67,4 +67,9 @@ class AdminController extends Controller
     {
         return view('admin.datakategoribarang');
     }
+
+    public function adminLogin()
+    {
+        return view('auth.login');
+    }
 }

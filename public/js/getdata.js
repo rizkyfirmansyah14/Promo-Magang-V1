@@ -851,7 +851,17 @@ jQuery(document).ready(function () {
 
     // CRUD AJAX TOP PROMO
 
+    // show modal add
+    jQuery('.addtop').on('click', function () {
+        $('#addTop').modal('show');
+    });
 
+    // datatable top promo
+    var datakat = $('#dataTop').DataTable({
+        "processing": true,
+        "ajax": "gettoppromo",
+        "order": []
+    });
 
     // END CRUD AJAX TOP PROMO
 });
