@@ -60,7 +60,8 @@
                             <ul class="cd-primary-nav">
                                 <li class="active"> <a href="index.html">Home </a></li>
                                 <li> <a href="{{ url('/about') }}">About </a> </li>
-                                <li class="drop-menu"> <a href="#." class="title collapsed" data-toggle="collapse" data-target="#down-1"> shop </a>
+                                <li class="drop-menu"> <a href="#." class="title collapsed" data-toggle="collapse"
+                                        data-target="#down-1"> shop </a>
                                     <div class="collapse" id="down-1">
                                         <div class="well">
                                             <ul>
@@ -103,11 +104,13 @@
 
                         <!-- Svg Icon -->
                         <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
-                            <circle fill="transparent" stroke="#2d3a4b" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+                            <circle fill="transparent" stroke="#2d3a4b" stroke-width="1" cx="27" cy="27" r="25"
+                                stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
                         </svg> </a>
 
                     <!-- Logo -->
-                    <div class="logo logo-center"> <a href="#."><img class="img-responsive" src="asset/images/logo-2.png" alt=""></a> </div>
+                    <div class="logo logo-center"> <a href="#."><img class="img-responsive"
+                                src="asset/images/logo-2.png" alt=""></a> </div>
                     <!-- Navigation -->
                     <nav class="navbar">
                         <!-- Nav Right -->
@@ -115,7 +118,8 @@
                             <ul class="navbar-right">
 
                                 <!-- USER INFO -->
-                                <li class="dropdown user-acc"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-user"></i> </a>
+                                <li class="dropdown user-acc"> <a href="#" class="dropdown-toggle"
+                                        data-toggle="dropdown" role="button"><i class="icon-user"></i> </a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <h6>HELLO! Jhon Smith</h6>
@@ -127,11 +131,14 @@
                                 </li>
 
                                 <!-- USER BASKET -->
-                                <li class="dropdown user-basket"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-basket-loaded"></i> </a>
+                                <li class="dropdown user-basket"> <a href="#" class="dropdown-toggle"
+                                        data-toggle="dropdown" role="button"><i class="icon-basket-loaded"></i> </a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="media-left">
-                                                <div class="cart-img"> <a href="#"> <img class="media-object img-responsive" src="asset/images/cart-img-1.jpg" alt="..."> </a> </div>
+                                                <div class="cart-img"> <a href="#"> <img
+                                                            class="media-object img-responsive"
+                                                            src="asset/images/cart-img-1.jpg" alt="..."> </a> </div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading">WOOD CHAIR</h6>
@@ -140,7 +147,9 @@
                                         </li>
                                         <li>
                                             <div class="media-left">
-                                                <div class="cart-img"> <a href="#"> <img class="media-object img-responsive" src="asset/images/cart-img-2.jpg" alt="..."> </a> </div>
+                                                <div class="cart-img"> <a href="#"> <img
+                                                            class="media-object img-responsive"
+                                                            src="asset/images/cart-img-2.jpg" alt="..."> </a> </div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading">WOOD STOOL</h6>
@@ -152,16 +161,20 @@
                                         </li>
                                         <li class="margin-0">
                                             <div class="row">
-                                                <div class="col-xs-6"> <a href="shopping-cart.html" class="btn">VIEW CART</a></div>
-                                                <div class="col-xs-6 "> <a href="checkout.html" class="btn">CHECK OUT</a></div>
+                                                <div class="col-xs-6"> <a href="shopping-cart.html" class="btn">VIEW
+                                                        CART</a></div>
+                                                <div class="col-xs-6 "> <a href="checkout.html" class="btn">CHECK
+                                                        OUT</a></div>
                                             </div>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <!-- SEARCH BAR -->
-                                <li class="dropdown"> <a href="javascript:void(0);" class="search-open"><i class=" icon-magnifier"></i></a>
-                                    <div class="search-inside animated bounceInUp"> <i class="icon-close search-close"></i>
+                                <li class="dropdown"> <a href="javascript:void(0);" class="search-open"><i
+                                            class=" icon-magnifier"></i></a>
+                                    <div class="search-inside animated bounceInUp"> <i
+                                            class="icon-close search-close"></i>
                                         <div class="search-overlay"></div>
                                         <div class="position-center-center">
                                             <div class="search">
@@ -195,7 +208,8 @@
                             <h4>The Latest Product from {{ config('app.name', 'Laravel') }}</h4>
                             <h1 class="extra-huge-text">look hot
                                 with style</h1>
-                            <div class="text-center"> <a href="#." class="btn btn-round margin-top-40">SHOP NOW</a> </div>
+                            <div class="text-center"> <a href="#." class="btn btn-round margin-top-40">SHOP NOW</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,7 +225,8 @@
                         <!-- Main Heading -->
                         <div class="heading text-center">
                             <h4>Category</h4>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus
+                                vehicula.
                                 Sed feugiat, tellus vel tristique posuere, diam</span>
                         </div>
 
@@ -224,7 +239,9 @@
                                 <li class="col-md-6">
 
                                     <!-- SHOP ITEM 1 -->
-                                    <article> <img class="img-responsive rounded border border border-light" src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori" style="width: 555px; height: 470px;">
+                                    <article> <img class="img-responsive rounded border border border-light"
+                                            src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori"
+                                            style="width: 555px; height: 470px;">
                                         <div class="position-center-center">
                                             <h4><a href="#.">{{$c->nama_kategori}}</a></h4>
                                             <a href="#." class="btn btn-small btn-round">MORE</a>
@@ -236,7 +253,8 @@
                             </ul>
 
                             <!-- SHOW MORE -->
-                            <div class="text-center margin-top-50"> <a href="#." class="btn btn-small btn-round"> SHOW MORE...</a> </div>
+                            <div class="text-center margin-top-50"> <a href="#." class="btn btn-small btn-round"> SHOW
+                                    MORE...</a> </div>
                         </div>
                     </div>
                 </section>
@@ -253,123 +271,177 @@
 
                         <!-- Popular Item Slide -->
                         <div class="papular-block block-slide">
-
+                            @foreach($category as $c)
 
                             <!-- Item -->
-                            <div class="item">
+                            <div class="item" >
                                 <!-- Item img -->
-                                <div class="item-img"> <img class="img-1" src="asset/images/{{$c->nama_kategori}}" alt=""> <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="">
+                                <div class="item-img"> <img class="img-1" style="height: 250px;" src="image/icon/{{ $c->icon_kategori}}"
+                                        alt=""> <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="">
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
+                                        <div class="position-center-center"> <a href="#."
+                                                class="btn btn-small btn-round">MORE</a> </div>
                                     </div>
                                 </div>
                                 <!-- Item Name -->
-                                <div class="item-name"> <a href="#.">GRAY TOPER</a> </div>
+                                <div class="item-name"> <a href="{{ url('/shop') }}">GRAY TOPER</a> </div>
                                 <!-- Price -->
                             </div>
 
+                            @endforeach
 
                         </div>
                     </div>
                 </section>
 
-                <!-- About -->
-                <section class="small-about padding-top-150 padding-bottom-150">
-                    <div class="container">
 
-                        <!-- Main Heading -->
-                        <div class="heading text-center">
-                            <h4>about ambil promo</h4>
-                            <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
-                                eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+
+                <!-- Content -->
+                <div id="content">
+
+                    <!-- New Arrival -->
+                    <section class="padding-top-100 padding-bottom-100">
+                        <div class="container">
+
+                            <!-- Main Heading -->
+                            <div class="heading text-center">
+                                <h4>Other Promo</h4>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus
+                                    vehicula.
+                                    Sed feugiat, tellus vel tristique posuere, diam</span>
+                            </div>
                         </div>
 
-                        <!-- Social Icons -->
-                        <ul class="social_icons">
-                            <li><a href="#."><i class="icon-social-facebook"></i></a></li>
-                            <li><a href="#."><i class="icon-social-twitter"></i></a></li>
-                            <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
-                            <li><a href="#."><i class="icon-social-youtube"></i></a></li>
-                            <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                </section>
+                        <!-- New Arrival -->
+                        <div class="arrival-block">
 
-                <!-- News Letter -->
-                <section class="news-letter style-2 padding-top-150 padding-bottom-150">
-                    <div class="container">
-                        <div class="heading light-head text-center margin-bottom-30">
-                            <h4>NEWSLETTER</h4>
-                            <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odi </span>
+                        @foreach($category as $c)
+                            <!-- Item -->
+                            <div class="item">
+                                <!-- Images -->
+                                <img class="img-1" style="height: 300px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2"
+                                    src="image/icon/{{ $c->icon_kategori}}" alt="">
+                                <!-- Overlay  -->
+                                <div class="overlay">
+                                    <!-- Price -->
+                                    <span class="price"><small>$</small>299</span>
+                                    <div class="position-center-center"> <a href="image/icon/{{ $c->icon_kategori}}"
+                                            data-lighter><i class="icon-magnifier"></i></a> </div>
+                                </div>
+                                <!-- Item Name -->
+                                <div class="item-name"> <a href="{{ url('/detail_product') }}">{{ $c->nama_kategori}}</a>
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+
+                        @endforeach
+
                         </div>
-                        <form>
-                            <input type="email" placeholder="Enter your email address" required>
-                            <button type="submit">SEND ME</button>
-                        </form>
-                    </div>
-                </section>
-            </div>
+                    </section>
 
-            <!--======= FOOTER =========-->
-            <footer>
-                <div class="container">
+                   
 
-                    <!-- ABOUT Location -->
-                    <div class="col-md-3">
-                        <div class="about-footer"> <img class="margin-bottom-30" src="asset/images/logo-foot.png" alt="">
-                            <p><i class="icon-pointer"></i> Street No. 12, Newyork 12, <br>
-                                MD - 123, USA.</p>
-                            <p><i class="icon-call-end"></i> 1.800.123.456789</p>
-                            <p><i class="icon-envelope"></i> info@PAVSHOP.com</p>
+                    <!-- About -->
+                    <section class="small-about padding-top-150 padding-bottom-150">
+                        <div class="container">
+
+                            <!-- Main Heading -->
+                            <div class="heading text-center">
+                                <h4>about ambil promo</h4>
+                                <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien
+                                    lacus, eu posuere odio luctus non. Nulla lacinia,
+                                    eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+                            </div>
+
+                            <!-- Social Icons -->
+                            <ul class="social_icons">
+                                <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+                                <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+                                <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+                                <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+                                <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+                            </ul>
                         </div>
-                    </div>
+                    </section>
 
-                    <!-- HELPFUL LINKS -->
-                    <div class="col-md-3">
-                        <h6>HELPFUL LINKS</h6>
-                        <ul class="link">
-                            <li><a href="#."> Products</a></li>
-                            <li><a href="#."> Find a Store</a></li>
-                            <li><a href="#."> Features</a></li>
-                            <li><a href="#."> Privacy Policy</a></li>
-                            <li><a href="#."> Blog</a></li>
-                            <li><a href="#."> Press Kit </a></li>
-                        </ul>
-                    </div>
-
-                    <!-- SHOP -->
-                    <div class="col-md-3">
-                        <h6>SHOP</h6>
-                        <ul class="link">
-                            <li><a href="#."> About Us</a></li>
-                            <li><a href="#."> Career</a></li>
-                            <li><a href="#."> Shipping Methods</a></li>
-                            <li><a href="#."> Contact</a></li>
-                            <li><a href="#."> Support</a></li>
-                            <li><a href="#."> Retailer</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- MY ACCOUNT -->
-                    <div class="col-md-3">
-                        <h6>MY ACCOUNT</h6>
-                        <ul class="link">
-                            <li><a href="#."> Login</a></li>
-                            <li><a href="#."> My Account</a></li>
-                            <li><a href="#."> My Cart</a></li>
-                            <li><a href="#."> Wishlist</a></li>
-                            <li><a href="#."> Checkout</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Rights -->
-                    <div class="rights">
-                        <p>© 2017 PAVSHOP All right reserved. </p>
-                        <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a> </div>
-                    </div>
+                    <!-- News Letter -->
+                    <section class="news-letter style-2 padding-top-150 padding-bottom-150">
+                        <div class="container">
+                            <div class="heading light-head text-center margin-bottom-30">
+                                <h4>NEWSLETTER</h4>
+                                <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien
+                                    lacus, eu posuere odi </span>
+                            </div>
+                            <form>
+                                <input type="email" placeholder="Enter your email address" required>
+                                <button type="submit">SEND ME</button>
+                            </form>
+                        </div>
+                    </section>
                 </div>
-            </footer>
+
+                <!--======= FOOTER =========-->
+                <footer>
+                    <div class="container">
+
+                        <!-- ABOUT Location -->
+                        <div class="col-md-3">
+                            <div class="about-footer"> <img class="margin-bottom-30" src="asset/images/logo-foot.png"
+                                    alt="">
+                                <p><i class="icon-pointer"></i> Street No. 12, Newyork 12, <br>
+                                    MD - 123, USA.</p>
+                                <p><i class="icon-call-end"></i> 1.800.123.456789</p>
+                                <p><i class="icon-envelope"></i> info@PAVSHOP.com</p>
+                            </div>
+                        </div>
+
+                        <!-- HELPFUL LINKS -->
+                        <div class="col-md-3">
+                            <h6>HELPFUL LINKS</h6>
+                            <ul class="link">
+                                <li><a href="#."> Products</a></li>
+                                <li><a href="#."> Find a Store</a></li>
+                                <li><a href="#."> Features</a></li>
+                                <li><a href="#."> Privacy Policy</a></li>
+                                <li><a href="#."> Blog</a></li>
+                                <li><a href="#."> Press Kit </a></li>
+                            </ul>
+                        </div>
+
+                        <!-- SHOP -->
+                        <div class="col-md-3">
+                            <h6>SHOP</h6>
+                            <ul class="link">
+                                <li><a href="#."> About Us</a></li>
+                                <li><a href="#."> Career</a></li>
+                                <li><a href="#."> Shipping Methods</a></li>
+                                <li><a href="#."> Contact</a></li>
+                                <li><a href="#."> Support</a></li>
+                                <li><a href="#."> Retailer</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- MY ACCOUNT -->
+                        <div class="col-md-3">
+                            <h6>MY ACCOUNT</h6>
+                            <ul class="link">
+                                <li><a href="#."> Login</a></li>
+                                <li><a href="#."> My Account</a></li>
+                                <li><a href="#."> My Cart</a></li>
+                                <li><a href="#."> Wishlist</a></li>
+                                <li><a href="#."> Checkout</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Rights -->
+                        <div class="rights">
+                            <p>© 2017 PAVSHOP All right reserved. </p>
+                            <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
         </main>
     </div>
     <script src="asset/js/jquery-1.11.3.min.js"></script>
