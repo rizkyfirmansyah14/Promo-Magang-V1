@@ -258,19 +258,19 @@
 
                         <!-- Popular Item Slide -->
                         <div class="papular-block block-slide">
-                            @foreach($category as $c)
+                            @foreach($toppromo as $t)
 
                             <!-- Item -->
                             <div class="item">
                                 <!-- Item img -->
-                                <div class="item-img"> <img class="img-1" style="height: 250px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="asset/images/shop-3-img-4.jpg" alt="">
+                                <div class="item-img"> <img class="img-1" style="width: 300px;" src="image/popular/{{ $t->image}}" alt=""> <img class="img-2" src="image/popular/{{ $t->image}}" alt="">
                                     <!-- Overlay -->
                                     <div class="overlay">
                                         <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
                                     </div>
                                 </div>
                                 <!-- Item Name -->
-                                <div class="item-name"> <a href="{{ url('/shop') }}">GRAY TOPER</a> </div>
+                                <div class="item-name"> <a href="{{ url('/shop') }}">{{ $t->title}}</a> </div>
                                 <!-- Price -->
                             </div>
 
@@ -305,7 +305,7 @@
                             <!-- Item -->
                             <div class="item">
                                 <!-- Images -->
-                                <img class="img-1" style="height: 20%;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
+                                <img class="img-1" style="height: 300px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
                                 <!-- Overlay  -->
                                 <div class="overlay">
                                     <!-- Price -->

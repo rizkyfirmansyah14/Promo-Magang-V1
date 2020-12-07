@@ -16,8 +16,9 @@ class CategorysController extends Controller
     public function index()
     {
         $category = DB::table('kategoris')->get();
-      
-        return view('user.home', compact('category'));
+        $toppromo = DB::table('popular_sliders')->get();
+
+        return view('user.home', compact('category'), compact('toppromo'));
     }
 
     /**
