@@ -305,7 +305,12 @@
                             <!-- Item -->
                             <div class="item">
                                 <!-- Images -->
+<<<<<<< Updated upstream
                                 <img class="img-1" style="height: 300px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
+=======
+                                <img class="img-1" style="height: 320px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2"
+                                    src="image/icon/{{ $c->icon_kategori}}" alt="">
+>>>>>>> Stashed changes
                                 <!-- Overlay  -->
                                 <div class="overlay">
                                     <!-- Price -->
