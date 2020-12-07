@@ -2,7 +2,8 @@
  <aside class="menu-sidebar d-none d-lg-block">
      <div class="logo">
          <a href="{{ route('dashboard')}}" class="flex">
-             <h3 style="color: #DB4A84;"> <i class="fas fa-tags" style="margin-right: 5px;"></i><span style="color: #7C56CD;">AMBIL</span>PROMO.</h3>
+             <img src="{{ asset('image/logo.png')}}" alt="logo.png">
+             <!-- <h3 style="color: #DB4A84;"> <i class="fas fa-tags" style="margin-right: 5px;"></i><span style="color: #7C56CD;">AMBIL</span>PROMO.</h3> -->
          </a>
      </div>
      <div class="menu-sidebar__content js-scrollbar1">

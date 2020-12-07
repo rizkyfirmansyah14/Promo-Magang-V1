@@ -306,10 +306,14 @@
                             <div class="item">
                                 <!-- Images -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                                 <img class="img-1" style="height: 300px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
 =======
                                 <img class="img-1" style="height: 320px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2"
                                     src="image/icon/{{ $c->icon_kategori}}" alt="">
+>>>>>>> Stashed changes
+=======
+                                <img class="img-1" style="width: 150%;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
 >>>>>>> Stashed changes
                                 <!-- Overlay  -->
                                 <div class="overlay">
