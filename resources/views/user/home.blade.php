@@ -159,7 +159,7 @@
                     <div class="position-center-center">
 
                         <!-- Header Text -->
-                        <div class="col-lg-7 col-lg-offset-5">
+                        <div class="col-lg-7 col-lg-offset-5" style="position: relative; margin-top: -60px;">
                             <h4>The Latest Promo from MALL <span style="color: #FFE600;">PROMO</span></h4>
                             <h1 class="extra-huge-text" style="color: black; font-size: 90px;">
                                 <span style="color: #FFE600;">search</span> promo
@@ -168,6 +168,7 @@
                             <div class="text-center"> <a href="{{ url('/shop')}}" class="btn btn-round margin-top-40">SHOP NOW</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
