@@ -270,7 +270,7 @@
 
                             @foreach($otherpromo as $o)
                             <!-- Item -->
-                            <div class="col-md-3">
+                            <div class="col-md-3" style="margin-top: 35px;">
                                 <div class="item">
                                     <!-- Item img -->
                                     <div class="item-img"> <img class="img-1" src="{{asset('image/' . $o->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $o->image)}}" alt="">

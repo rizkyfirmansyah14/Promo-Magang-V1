@@ -27,30 +27,11 @@
         <header>
             @include('parcial.navbaruser')
         </header>
-
-        @foreach($detail as $u)
-        <!--======= SUB BANNER =========-->
-        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('{{ asset('image/'.$u->image)}}');">
-            <div class="position-center-center">
-                <div class="container">
-                    <h4>
-                        @foreach($u->KategoriBarang as $item)
-                        {{$item->kategori_barang}}
-                        @endforeach
-                    </h4>
-                    <ol class="breadcrumb">
-                        <li><a href="{{url('/')}}">Home</a></li>
-                        <li class="active">{{ $u->title}}</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        @endforeach
         <!-- Content -->
         <div id="content">
 
             <!-- Popular Products -->
-            <section class="padding-top-100 padding-bottom-100">
+            <section class="padding-bottom-100">
                 <div class="container">
 
                     <!-- SHOP DETAIL -->
@@ -78,7 +59,7 @@
                                 <span class="price"><small>Rp.</small>{{ $d->price}}</span>
 
                                 <!-- Sale Tags -->
-                                <div class="on-sale"> 10% <span>OFF</span> </div>
+                                <div class="on-sale" style="margin-right: -40px;"> 10% <span>OFF</span> </div>
                                 <ul class="item-owner">
                                     <li>Designer :<span> ABC Art</span></li>
                                     <li>Brand:<span> LimeWood</span></li>
@@ -102,45 +83,11 @@
                                                 </select>
                                             </div>
                                         </li>
-
-                                        <!-- COLORS -->
-                                        <li class="col-xs-8">
-                                            <ul class="colors-shop">
-                                                <li><span class="margin-right-20">Colors</span></li>
-                                                <li><a href="#." style="background:#958170;"></a></li>
-                                                <li><a href="#." style="background:#c9a688;"></a></li>
-                                                <li><a href="#." style="background:#c9c288;"></a></li>
-                                                <li><a href="#." style="background:#a7c988;"></a></li>
-                                                <li><a href="#." style="background:#9ed66b;"></a></li>
-                                                <li><a href="#." style="background:#6bd6b1;"></a></li>
-                                                <li><a href="#." style="background:#82c2dc;"></a></li>
-                                                <li><a href="#." style="background:#8295dc;"></a></li>
-                                            </ul>
-                                        </li>
-
+                                    </ul>
+                                    <ul class="row">
                                         <!-- ADD TO CART -->
                                         <li class="col-xs-6"> <a href="#." class="btn">ADD TO CART</a> </li>
-
-                                        <!-- LIKE -->
-                                        <li class="col-xs-6"> <a href="#." class="like-us"><i class="icon-heart"></i></a> </li>
                                     </ul>
-
-                                    <!-- INFOMATION -->
-                                    <div class="inner-info">
-                                        <h6>DELIVERY INFORMATION</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus ligula a scelerisque gravida. Nullam laoreet tortor ac maximus alique met, consectetur adipiscing elit. </p>
-                                        <h6>SHIPPING & RETURNS</h6>
-                                        <h6>SHARE THIS PRODUCT</h6>
-
-                                        <!-- Social Icons -->
-                                        <ul class="social_icons">
-                                            <li><a href="#."><i class="icon-social-facebook"></i></a></li>
-                                            <li><a href="#."><i class="icon-social-twitter"></i></a></li>
-                                            <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
-                                            <li><a href="#."><i class="icon-social-youtube"></i></a></li>
-                                            <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -367,20 +314,6 @@
                         <li><a href="#."><i class="icon-social-youtube"></i></a></li>
                         <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
                     </ul>
-                </div>
-            </section>
-
-            <!-- News Letter -->
-            <section class="news-letter padding-top-150 padding-bottom-150">
-                <div class="container">
-                    <div class="heading light-head text-center margin-bottom-30">
-                        <h4>NEWSLETTER</h4>
-                        <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odi </span>
-                    </div>
-                    <form>
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit">SEND ME</button>
-                    </form>
                 </div>
             </section>
         </div>
