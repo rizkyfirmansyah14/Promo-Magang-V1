@@ -96,7 +96,8 @@ class UserController extends Controller
 
     public function detailProduct($id)
     {
+        $diskon = Diskon::get();
         $detailbarang = Diskon::where('id', $id)->get();
-        return view('user.product-detail', ['detail' => $detailbarang]);
+        return view('user.product-detail', ['detail' => $detailbarang, 'diskon' => $diskon]);
     }
 }

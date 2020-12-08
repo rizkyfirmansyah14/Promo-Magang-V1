@@ -61,8 +61,20 @@
                                 <!-- Sale Tags -->
                                 <div class="on-sale" style="margin-right: -40px;"> 10% <span>OFF</span> </div>
                                 <ul class="item-owner">
-                                    <li>Designer :<span> ABC Art</span></li>
-                                    <li>Brand:<span> LimeWood</span></li>
+                                    <li>Category Promo:
+                                        <span>
+                                            @foreach($d->Kategori as $item)
+                                            {{$item->nama_kategori}}
+                                            @endforeach
+                                        </span>
+                                    </li>
+                                    <li>Category Goods:
+                                        <span>
+                                            @foreach($d->KategoriBarang as $item)
+                                            {{$item->kategori_barang}}
+                                            @endforeach
+                                        </span>
+                                    </li>
                                 </ul>
 
                                 <!-- Item Detail -->
@@ -208,7 +220,7 @@
 
                     <!-- Main Heading -->
                     <div class="heading text-center">
-                        <h4>YOU MAY LIKE IT</h4>
+                        <h4>OTHER PROMO</h4>
                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
                             Sed feugiat, tellus vel tristique posuere, diam</span>
                     </div>
@@ -216,81 +228,29 @@
                     <!-- Popular Item Slide -->
                     <div class="papular-block block-slide">
 
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"> <img class="img-1" src="asset/images/product-1.jpg" alt=""> <img class="img-2" src="asset/images/product-2.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-center-center">
-                                        <div class="inn"><a href="asset/images/product-1.jpg" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"> <a href="#.">stone cup</a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span>
-                        </div>
+                        @foreach($diskon as $j)
 
                         <!-- Item -->
                         <div class="item">
                             <!-- Item img -->
-                            <div class="item-img"> <img class="img-1" src="asset/images/product-2.jpg" alt=""> <img class="img-2" src="asset/images/product-2.jpg" alt="">
+                            <div class="item-img"> <img class="img-1" src="{{asset('image/' . $j->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $j->image)}}" alt="">
                                 <!-- Overlay -->
                                 <div class="overlay">
                                     <div class="position-center-center">
-                                        <div class="inn"><a href="asset/images/product-2.jpg" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
+                                        <div class="inn"><a href="{{asset('image/' . $j->image)}}" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Item Name -->
-                            <div class="item-name"> <a href="#.">gray bag</a>
-                                <p>Lorem ipsum dolor sit amet</p>
+                            <div class="item-name"> <a href="{{ url('/detailproduct/'. $j->id)}}">{{$j->title}}</a>
+                                <p>{{$j->deskripsi}}</p>
                             </div>
                             <!-- Price -->
-                            <span class="price"><small>$</small>299</span>
+                            <span class="price"><small>Rp.</small>{{$j->price}}</span>
                         </div>
 
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"> <img class="img-1" src="asset/images/product-3.jpg" alt=""> <img class="img-2" src="asset/images/product-2.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-center-center">
-                                        <div class="inn"><a href="asset/images/product-3.jpg" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"> <a href="#.">chiar</a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span>
-                        </div>
+                        @endforeach
 
-                        <!-- Item -->
-                        <div class="item">
-                            <!-- Item img -->
-                            <div class="item-img"> <img class="img-1" src="asset/images/product-4.jpg" alt=""> <img class="img-2" src="asset/images/product-2.jpg" alt="">
-                                <!-- Overlay -->
-                                <div class="overlay">
-                                    <div class="position-center-center">
-                                        <div class="inn"><a href="asset/images/product-4.jpg" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item Name -->
-                            <div class="item-name"> <a href="#.">STool</a>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <!-- Price -->
-                            <span class="price"><small>$</small>299</span>
-                        </div>
                     </div>
                 </div>
             </section>
