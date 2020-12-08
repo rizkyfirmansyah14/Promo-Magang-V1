@@ -28,21 +28,24 @@
             @include('parcial.navbaruser')
         </header>
 
+        @foreach($detail as $u)
         <!--======= SUB BANNER =========-->
-        <section class="sub-bnr" data-stellar-background-ratio="0.5">
+        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('{{ asset('image/'.$u->image)}}');">
             <div class="position-center-center">
                 <div class="container">
-                    <h4>WOOD CHAIR</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
-                        Sed feugiat, tellus vel tristique posuere, diam</p>
+                    <h4>
+                        @foreach($u->KategoriBarang as $item)
+                        {{$item->kategori_barang}}
+                        @endforeach
+                    </h4>
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active">Data</li>
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li class="active">{{ $u->title}}</li>
                     </ol>
                 </div>
             </div>
         </section>
-
+        @endforeach
         <!-- Content -->
         <div id="content">
 

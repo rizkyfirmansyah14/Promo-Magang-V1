@@ -295,7 +295,7 @@
                     </section>
 
                     <!-- About -->
-                    <section class="small-about padding-top-150 padding-bottom-150" style="border-top: 0px;">
+                    <section class="small-about padding-bottom-150" style="border-top: 0px; padding-top: 5%;">
                         <div class="container">
 
                             <!-- Main Heading -->
