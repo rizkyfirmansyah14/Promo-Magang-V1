@@ -58,20 +58,10 @@
                         <!-- Nav -->
                         <nav>
                             <ul class="cd-primary-nav">
-                                <li class="active"> <a href="{{ url('/')}}">Home </a></li>
-                                <li> <a href="{{ url('/about') }}">About </a> </li>
-                                <li class="drop-menu"> <a href="#." class="title collapsed" data-toggle="collapse" data-target="#down-1"> shop </a>
-                                    <div class="collapse" id="down-1">
-                                        <div class="well">
-                                            <ul>
-                                                <li> <a href="{{ url('/shop') }}">Shop</a> </li>
-                                                <li> <a href="{{ url('/detail_product') }}">Product Detail</a> </li>
-                                                <li> <a href="{{ url('/shopping_cart') }}">Shopping Cart</a> </li>
-                                                <li> <a href="{{ url('/checkout') }}">Checkout </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                <li class="active"> <a href="{{ url('/')}}">home </a></li>
+                                <li> <a href="{{ url('/about') }}">about </a> </li>
+                                <li> <a href="{{ url('/shop')}}"> shop</a> </li>
+                                <li> <a href="contact.html"> catalogue</a> </li>
                                 <li> <a href="contact.html"> contact</a> </li>
                             </ul>
                         </nav>
@@ -196,12 +186,12 @@
 
                         <!-- Header Text -->
                         <div class="col-lg-7 col-lg-offset-5">
-                            <h4>The Latest Product from MALL <span style="color: #FFE600;">PROMO</span></h4>
-                            <h1 class="extra-huge-text" style="color: black;">
-                                <span style="color: #FFE600;">shop</span> easy
-                                form <span style="color: #FFE600;">home</span>
+                            <h4>The Latest Promo from MALL <span style="color: #FFE600;">PROMO</span></h4>
+                            <h1 class="extra-huge-text" style="color: black; font-size: 90px;">
+                                <span style="color: #FFE600;">search</span> promo
+                                from <span style="color: #FFE600;">home</span>
                             </h1>
-                            <div class="text-center"> <a href="#." class="btn btn-round margin-top-40">SHOP NOW</a>
+                            <div class="text-center"> <a href="{{ url('/shop')}}" class="btn btn-round margin-top-40">SHOP NOW</a>
                             </div>
                         </div>
                     </div>

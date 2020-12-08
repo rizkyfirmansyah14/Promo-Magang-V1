@@ -4739,7 +4739,7 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background: #fff url(../images/special-bg.jpg) center center no-repeat;
+    background: #fff url(../images/background2.jpg) center center no-repeat;
     background-size: cover;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
