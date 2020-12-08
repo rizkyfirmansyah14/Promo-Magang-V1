@@ -7,32 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="asset/rs-plugin/css/settings.css" media="screen" />
-
-    <!-- Bootstrap Core CSS -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="asset/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="asset/css/ionicons.min.css" rel="stylesheet">
-    <link href="asset/css/main.css" rel="stylesheet">
-    <link href="asset/css/style.css" rel="stylesheet">
-    <link href="asset/css/responsive.css" rel="stylesheet">
-
-    <!-- JavaScripts -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Online Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    @include('parcial.styleuser')
 
 </head>
 
@@ -386,49 +361,9 @@
             </div>
         </footer>
     </div>
-    <script src="asset/js/jquery-1.11.3.min.js"></script>
-    <script src="asset/js/bootstrap.min.js"></script>
-    <script src="asset/js/own-menu.js"></script>
-    <script src="asset/js/jquery.lighter.js"></script>
-    <script src="asset/js/owl.carousel.min.js"></script>
 
-    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script type="text/javascript" src="asset/rs-plugin/js/jquery.tp.t.min.js"></script>
-    <script type="text/javascript" src="asset/rs-plugin/js/jquery.tp.min.js"></script>
-    <script src="asset/js/main.js"></script>
+    @include('parcial.jsuser')
 
-    <!-- Begin Map Script -->
-    <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script>
-    <script type="text/javascript">
-        /*==========  Map  ==========*/
-        var map;
-
-        function initialize_map() {
-            if ($('#map').length) {
-                var myLatLng = new google.maps.LatLng(-37.814199, 144.961560);
-                var mapOptions = {
-                    zoom: 17,
-                    center: myLatLng,
-                    scrollwheel: false,
-                    panControl: false,
-                    zoomControl: true,
-                    scaleControl: false,
-                    mapTypeControl: false,
-                    streetViewControl: false
-                };
-                map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    tittle: 'Envato',
-                    icon: './images/map-locator.png'
-                });
-            } else {
-                return false;
-            }
-        }
-        google.maps.event.addDomListener(window, 'load', initialize_map);
-    </script>
 </body>
 
 </html>

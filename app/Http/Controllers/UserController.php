@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Diskon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
@@ -91,5 +92,11 @@ class UserController extends Controller
     {
         $user = User::find($_POST["id"]);
         $user->delete();
+    }
+
+    public function detailProduct($id)
+    {
+        $detailbarang = Diskon::where('id', $id)->get();
+        return view('user.product-detail', ['detail' => $detailbarang]);
     }
 }

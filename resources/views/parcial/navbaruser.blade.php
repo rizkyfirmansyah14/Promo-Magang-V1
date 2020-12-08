@@ -24,7 +24,7 @@
                             About
                         </a>
                     </li>
-                    <li class="dropdown {{ Request::is('shop') ? 'active' : '' }}">
+                    <li class="dropdown {{ Request::is('shop') || Request::is('detailproduct')  ? 'active' : '' }}">
                         <a href="{{ url('/shop')}}">
                             Shop
                         </a>

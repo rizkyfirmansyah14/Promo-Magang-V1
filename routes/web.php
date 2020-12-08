@@ -24,10 +24,7 @@ Route::get('/about', function () {
     return view('user/about');
 });
 
-
-Route::get('/detail_product', function () {
-    return view('user/product-detail');
-});
+Route::get('/detailproduct/{id}', 'UserController@detailProduct');
 
 Route::get('/shopping_cart', function () {
     return view('user/shopping-cart');
