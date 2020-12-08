@@ -73,34 +73,8 @@
                                     <li><a href="#."> Towels <span>25</span></a></li>
                                 </ul>
 
-                                <!-- FILTER BY PRICE -->
-                                <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY PRICE</h5>
-
                                 <!-- TAGS -->
-                                <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY COLORS</h5>
-                                <ul class="colors">
-                                    <li><a href="#." style="background:#958170;"></a></li>
-                                    <li><a href="#." style="background:#c9a688;"></a></li>
-                                    <li><a href="#." style="background:#c9c288;"></a></li>
-                                    <li><a href="#." style="background:#a7c988;"></a></li>
-                                    <li><a href="#." style="background:#9ed66b;"></a></li>
-                                    <li><a href="#." style="background:#6bd6b1;"></a></li>
-                                    <li><a href="#." style="background:#82c2dc;"></a></li>
-                                    <li><a href="#." style="background:#8295dc;"></a></li>
-                                    <li><a href="#." style="background:#9b82dc;"></a></li>
-                                    <li><a href="#." style="background:#dc82d9;"></a></li>
-                                    <li><a href="#." style="background:#dc82a2;"></a></li>
-                                    <li><a href="#." style="background:#e04756;"></a></li>
-                                    <li><a href="#." style="background:#f56868;"></a></li>
-                                    <li><a href="#." style="background:#eda339;"></a></li>
-                                    <li><a href="#." style="background:#edd639;"></a></li>
-                                    <li><a href="#." style="background:#daed39;"></a></li>
-                                    <li><a href="#." style="background:#a3ed39;"></a></li>
-                                    <li><a href="#." style="background:#f56868;"></a></li>
-                                </ul>
-
-                                <!-- TAGS -->
-                                <h5 class="shop-tittle margin-top-60 margin-bottom-30">PAUPLAR TAGS</h5>
+                                <h5 class="shop-tittle margin-top-60 margin-bottom-30">POPULAR TAGS</h5>
                                 <ul class="shop-tags">
                                     <li><a href="#.">Towels</a></li>
                                     <li><a href="#.">Chair</a></li>
@@ -111,16 +85,6 @@
                                     <li><a href="#.">TV Cabinets</a></li>
                                     <li><a href="#.">Best Seller</a></li>
                                     <li><a href="#.">Top Selling</a></li>
-                                </ul>
-
-                                <!-- BRAND -->
-                                <h5 class="shop-tittle margin-top-60 margin-bottom-30">brands</h5>
-                                <ul class="shop-cate">
-                                    <li><a href="#."> G-Furniture
-                                            BigYellow</a></li>
-                                    <li><a href="#."> WoodenBazaar</a></li>
-                                    <li><a href="#."> GreenWoods</a></li>
-                                    <li><a href="#."> Hot-n-Fire </a></li>
                                 </ul>
 
                                 <!-- SIDE BACR BANER -->
@@ -374,7 +338,7 @@
             </section>
 
             <!-- About -->
-            <section class="small-about padding-top-150 padding-bottom-150">
+            <section class="small-about padding-bottom-150" style="border-top: 0px; padding-top: 5%;">
                 <div class="container">
 
                     <!-- Main Heading -->
@@ -394,84 +358,12 @@
                     </ul>
                 </div>
             </section>
-
-            <!-- News Letter -->
-            <section class="news-letter padding-top-150 padding-bottom-150">
-                <div class="container">
-                    <div class="heading light-head text-center margin-bottom-30">
-                        <h4>NEWSLETTER</h4>
-                        <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odi </span>
-                    </div>
-                    <form>
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit">SEND ME</button>
-                    </form>
-                </div>
-            </section>
         </div>
 
         <!--======= FOOTER =========-->
-        <footer>
-            <div class="container">
+            @include('parcial.footer')
 
-                <!-- ABOUT Location -->
-                <div class="col-md-3">
-                    <div class="about-footer"> <img class="margin-bottom-30" src="images/logo-foot.png" alt="">
-                        <p><i class="icon-pointer"></i> Street No. 12, Newyork 12, <br>
-                            MD - 123, USA.</p>
-                        <p><i class="icon-call-end"></i> 1.800.123.456789</p>
-                        <p><i class="icon-envelope"></i> info@PAVSHOP.com</p>
-                    </div>
-                </div>
-
-                <!-- HELPFUL LINKS -->
-                <div class="col-md-3">
-                    <h6>HELPFUL LINKS</h6>
-                    <ul class="link">
-                        <li><a href="#."> Products</a></li>
-                        <li><a href="#."> Find a Store</a></li>
-                        <li><a href="#."> Features</a></li>
-                        <li><a href="#."> Privacy Policy</a></li>
-                        <li><a href="#."> Blog</a></li>
-                        <li><a href="#."> Press Kit </a></li>
-                    </ul>
-                </div>
-
-                <!-- SHOP -->
-                <div class="col-md-3">
-                    <h6>SHOP</h6>
-                    <ul class="link">
-                        <li><a href="#."> About Us</a></li>
-                        <li><a href="#."> Career</a></li>
-                        <li><a href="#."> Shipping Methods</a></li>
-                        <li><a href="#."> Contact</a></li>
-                        <li><a href="#."> Support</a></li>
-                        <li><a href="#."> Retailer</a></li>
-                    </ul>
-                </div>
-
-                <!-- MY ACCOUNT -->
-                <div class="col-md-3">
-                    <h6>MY ACCOUNT</h6>
-                    <ul class="link">
-                        <li><a href="#."> Login</a></li>
-                        <li><a href="#."> My Account</a></li>
-                        <li><a href="#."> My Cart</a></li>
-                        <li><a href="#."> Wishlist</a></li>
-                        <li><a href="#."> Checkout</a></li>
-                    </ul>
-                </div>
-
-                <!-- Rights -->
-
-                <div class="rights">
-                    <p>© 2017 PAVSHOP All right reserved. </p>
-                    <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a> </div>
-                </div>
-            </div>
-        </footer>
-
-        <!--======= RIGHTS =========-->
+            <!--======= RIGHTS =========-->
 
     </div>
 
