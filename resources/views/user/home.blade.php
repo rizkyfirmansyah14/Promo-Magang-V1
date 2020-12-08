@@ -58,7 +58,7 @@
                         <!-- Nav -->
                         <nav>
                             <ul class="cd-primary-nav">
-                                <li class="active"> <a href="index.html">Home </a></li>
+                                <li class="active"> <a href="{{ url('/')}}">Home </a></li>
                                 <li> <a href="{{ url('/about') }}">About </a> </li>
                                 <li class="drop-menu"> <a href="#." class="title collapsed" data-toggle="collapse" data-target="#down-1"> shop </a>
                                     <div class="collapse" id="down-1">
@@ -75,15 +75,6 @@
                                 <li> <a href="contact.html"> contact</a> </li>
                             </ul>
                         </nav>
-
-                        <!-- Social Icons -->
-                        <ul class="social_icons">
-                            <li><a href="#."><i class="icon-social-facebook"></i></a></li>
-                            <li><a href="#."><i class="icon-social-twitter"></i></a></li>
-                            <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
-                            <li><a href="#."><i class="icon-social-youtube"></i></a></li>
-                            <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
-                        </ul>
                     </div>
 
                     <!-- Right Section -->
@@ -107,7 +98,11 @@
                         </svg> </a>
 
                     <!-- Logo -->
-                    <div class="logo logo-center"> <a href="#."><img class="img-responsive" src="asset/images/logo-2.png" alt=""></a> </div>
+                    <div class="logo logo-center">
+                        <a href="#.">
+                            <h3 style="color: black; margin-top: 5px;">Mall<span style="color: #FFE600;">PROMO</span></h3>
+                        </a>
+                    </div>
                     <!-- Navigation -->
                     <nav class="navbar">
                         <!-- Nav Right -->
@@ -127,11 +122,18 @@
                                 </li>
 
                                 <!-- USER BASKET -->
-                                <li class="dropdown user-basket"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-basket-loaded"></i> </a>
+                                <li class="dropdown user-basket">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                        <i class="icon-basket-loaded"></i>
+                                    </a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="media-left">
-                                                <div class="cart-img"> <a href="#"> <img class="media-object img-responsive" src="asset/images/cart-img-1.jpg" alt="..."> </a> </div>
+                                                <div class="cart-img">
+                                                    <a href="#">
+                                                        <img class="media-object img-responsive" src="asset/images/cart-img-1.jpg" alt="...">
+                                                    </a>
+                                                </div>
                                             </div>
                                             <div class="media-body">
                                                 <h6 class="media-heading">WOOD CHAIR</h6>
@@ -193,10 +195,12 @@
                     <div class="position-center-center">
 
                         <!-- Header Text -->
-                        <div class="col-lg-7 col-lg-offset-5"> <span class="price"><small>$</small>299</span>
-                            <h4>The Latest Product from {{ config('app.name', 'Laravel') }}</h4>
-                            <h1 class="extra-huge-text">look hot
-                                with style</h1>
+                        <div class="col-lg-7 col-lg-offset-5">
+                            <h4>The Latest Product from MALL <span style="color: #FFE600;">PROMO</span></h4>
+                            <h1 class="extra-huge-text" style="color: black;">
+                                <span style="color: #FFE600;">shop</span> easy
+                                form <span style="color: #FFE600;">home</span>
+                            </h1>
                             <div class="text-center"> <a href="#." class="btn btn-round margin-top-40">SHOP NOW</a>
                             </div>
                         </div>
@@ -214,9 +218,9 @@
                         <!-- Main Heading -->
                         <div class="heading text-center">
                             <h4>Category</h4>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus
-                                vehicula.
-                                Sed feugiat, tellus vel tristique posuere, diam</span>
+                            <span>
+                                in this category, all items will be sorted based on the category you have selected and you will see all items based on the selected category
+                            </span>
                         </div>
 
                         <!-- NEW ARRIVAL -->
@@ -298,32 +302,34 @@
                             </div>
                         </div>
 
-                        <!-- New Arrival -->
-                        <div class="arrival-block">
+                        <!-- Popular Item Slide -->
+                        <div class="papular-block row" style="padding: 5%; margin-top: -70px;">
 
-                            @foreach($category as $c)
+                            @foreach($otherpromo as $o)
                             <!-- Item -->
-                            <div class="item">
-                                <!-- Images -->
-                                <img class="img-1" style="height: 300px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2" src="image/icon/{{ $c->icon_kategori}}" alt="">
-                                <!-- Overlay  -->
-                                <div class="overlay">
+                            <div class="col-md-3">
+                                <div class="item">
+                                    <!-- Item img -->
+                                    <div class="item-img"> <img class="img-1" src="{{asset('image/' . $o->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $o->image)}}" alt="">
+                                        <!-- Overlay -->
+                                        <div class="overlay">
+                                            <div class="position-center-center">
+                                                <div class="inn"><a href="{{asset('image/' . $o->image)}}" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Name -->
+                                    <div class="item-name"> <a href="#.">{{$o->title}}</a>
+                                        <p>{{$o->deskripsi}}</p>
+                                    </div>
                                     <!-- Price -->
-                                    <span class="price"><small>$</small>299</span>
-                                    <div class="position-center-center"> <a href="image/icon/{{ $c->icon_kategori}}" data-lighter><i class="icon-magnifier"></i></a> </div>
-                                </div>
-                                <!-- Item Name -->
-                                <div class="item-name"> <a href="{{ url('/detail_product') }}">{{ $c->nama_kategori}}</a>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <span class="price"><small>Rp</small>{{$o->price}}</span>
                                 </div>
                             </div>
-
                             @endforeach
 
                         </div>
                     </section>
-
-
 
                     <!-- About -->
                     <section class="small-about padding-top-150 padding-bottom-150">
@@ -354,8 +360,10 @@
                     <div class="container">
 
                         <!-- ABOUT Location -->
-                        <div class="col-md-3">
-                            <div class="about-footer"> <img class="margin-bottom-30" src="asset/images/logo-foot.png" alt="">
+                        <div class="col-md-3" style="margin-top: -25px;">
+                            <div class="about-footer">
+                                <h3 style="color: white; margin-bottom: 30px;">Mall<span style="color: #FFE600;">PROMO</span></h3>
+                                <!-- <img class="margin-bottom-30" src="asset/images/logo-foot.png" alt=""> -->
                                 <p><i class="icon-pointer"></i> Street No. 12, Newyork 12, <br>
                                     MD - 123, USA.</p>
                                 <p><i class="icon-call-end"></i> 1.800.123.456789</p>
@@ -403,7 +411,7 @@
 
                         <!-- Rights -->
                         <div class="rights">
-                            <p>© 2017 PAVSHOP All right reserved. </p>
+                            <p>© {{date('Y')}} MallPROMO All right reserved. </p>
                             <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a>
                             </div>
                         </div>

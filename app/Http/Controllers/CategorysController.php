@@ -17,8 +17,9 @@ class CategorysController extends Controller
     {
         $category = DB::table('kategoris')->get();
         $toppromo = DB::table('popular_sliders')->get();
+        $otherpromo = DB::table('diskons')->get();
 
-        return view('user.home', compact('category'), compact('toppromo'));
+        return view('user.home', compact('category', 'toppromo', 'otherpromo'));
     }
 
     /**
