@@ -28,7 +28,7 @@
 
         <!-- CATALOGUE -->
         <div class="col-md-4">
-            <h6>CATALOGUE</h6>
+            <h6>MORE IN WEBSITE</h6>
             <ul class="link">
                 <li><a href="#."> About Us</a></li>
                 <li><a href="#."> Catalogue</a></li>

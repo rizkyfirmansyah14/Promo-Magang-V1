@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Diskon;
-use App\KategoriBarang;
-use App\PopularSlider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -96,18 +95,13 @@ class UserController extends Controller
         $user->delete();
     }
 
-    public function detailProduct($id)
+    public function viewLogin()
     {
-        $diskon = Diskon::get();
-        $detailbarang = Diskon::where('id', $id)->get();
-        return view('user.product-detail', ['detail' => $detailbarang, 'diskon' => $diskon]);
-    }
-
-    public function categoryView()
-    {
-        $kategori = KategoriBarang::get();
-        $popular = PopularSlider::get();
-
-        return view('user.shop', ['category' => $kategori, 'popular' => $popular, 'diskon' => Diskon::paginate(10)]);
+        $user = DB::table('users')->select('status_user')->where('id', Auth::id())->first();
+        if ($user) {
+            return redirect()->route('dashboard');
+        } else {
+            return view('auth.login');
+        }
     }
 }

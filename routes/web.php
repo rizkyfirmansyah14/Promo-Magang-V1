@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'CategorysController@index');
 
-Route::get('/shop', 'UserController@categoryView');
+Route::get('/shop', 'ViewController@categoryView');
 
 Route::get('/about', function () {
     return view('user/about');
 });
 
-Route::get('/detailproduct/{id}', 'UserController@detailProduct');
+Route::get('/detailproduct/{id}', 'ViewController@detailProduct');
 
 Route::get('/shopping_cart', function () {
     return view('user/shopping-cart');
@@ -32,9 +32,7 @@ Route::get('/checkout', function () {
     return view('user/checkout');
 });
 
-Route::get('/admin', function () {
-    return view('auth.login');
-});
+Route::get('/admin', 'UserController@viewLogin');
 
 Auth::routes();
 

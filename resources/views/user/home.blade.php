@@ -70,7 +70,6 @@
                     <nav class="navbar">
                         <!-- Nav Right -->
                         <div class="nav-right">
-
                         </div>
                     </nav>
                 </div>
