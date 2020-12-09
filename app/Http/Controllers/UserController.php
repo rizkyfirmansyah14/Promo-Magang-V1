@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Diskon;
+use App\KategoriBarang;
+use App\PopularSlider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
@@ -99,5 +101,13 @@ class UserController extends Controller
         $diskon = Diskon::get();
         $detailbarang = Diskon::where('id', $id)->get();
         return view('user.product-detail', ['detail' => $detailbarang, 'diskon' => $diskon]);
+    }
+
+    public function categoryView()
+    {
+        $kategori = KategoriBarang::get();
+        $popular = PopularSlider::get();
+
+        return view('user.shop', ['category' => $kategori, 'popular' => $popular, 'diskon' => Diskon::paginate(10)]);
     }
 }

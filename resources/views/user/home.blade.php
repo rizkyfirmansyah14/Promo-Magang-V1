@@ -32,11 +32,10 @@
                         <!-- Nav -->
                         <nav>
                             <ul class="cd-primary-nav">
-                                <li class="active"> <a href="{{ url('/')}}">home </a></li>
-                                <li> <a href="{{ url('/about') }}">about </a> </li>
-                                <li> <a href="{{ url('/shop')}}"> shop</a> </li>
-                                <li> <a href="contact.html"> catalogue</a> </li>
-                                <li> <a href="contact.html"> contact</a> </li>
+                                <li class="active"> <a href="{{ url('/')}}">home</a></li>
+                                <li> <a href="{{ url('/about') }}">about</a> </li>
+                                <li> <a href="{{ url('/shop')}}">catalogue</a> </li>
+                                <li> <a href="contact.html">contact</a> </li>
                             </ul>
                         </nav>
                     </div>
@@ -291,29 +290,6 @@
                             </div>
                             @endforeach
 
-                        </div>
-                    </section>
-
-                    <!-- About -->
-                    <section class="small-about padding-bottom-150" style="border-top: 0px; padding-top: 5%;">
-                        <div class="container">
-
-                            <!-- Main Heading -->
-                            <div class="heading text-center">
-                                <h4>about ambil promo</h4>
-                                <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien
-                                    lacus, eu posuere odio luctus non. Nulla lacinia,
-                                    eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
-                            </div>
-
-                            <!-- Social Icons -->
-                            <ul class="social_icons">
-                                <li><a href="#."><i class="icon-social-facebook"></i></a></li>
-                                <li><a href="#."><i class="icon-social-twitter"></i></a></li>
-                                <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
-                                <li><a href="#."><i class="icon-social-youtube"></i></a></li>
-                                <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
-                            </ul>
                         </div>
                     </section>
                 </div>

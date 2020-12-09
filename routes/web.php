@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'CategorysController@index');
 
-Route::get('/shop', function () {
-    return view('user/shop');
-});
+Route::get('/shop', 'UserController@categoryView');
 
 Route::get('/about', function () {
     return view('user/about');

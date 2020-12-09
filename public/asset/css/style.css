@@ -1586,7 +1586,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .arrival-block .item-name a {
-    font-size: 22px;
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 3px;
     color: #2d3a4b;
@@ -1913,9 +1913,8 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .papular-block .item-name a {
-    font-size: 22px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 3px;
     color: #2d3a4b;
     text-transform: uppercase;
 }
