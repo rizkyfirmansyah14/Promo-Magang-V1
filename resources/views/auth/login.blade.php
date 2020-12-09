@@ -64,7 +64,7 @@
                                         </button>
                                         <br>
                                         <div class="text-center">
-                                            <a class="small" href="{{ route('register') }}">Register</a>
+                                            <a class="small" href="{{ route('register') }}">Don't Have An Account? Register Now!</a>
                                         </div>
                                     </form>
                                 </div>
