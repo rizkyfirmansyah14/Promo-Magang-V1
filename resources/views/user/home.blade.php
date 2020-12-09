@@ -198,6 +198,7 @@
 
                             @foreach($otherpromo as $o)
                             <!-- Item -->
+<<<<<<< Updated upstream
                             <div class="col-md-3" style="margin-top: 35px;">
                                 <div class="item">
                                     <!-- Item img -->
@@ -213,6 +214,21 @@
                                     <div class="item-name"> <a href="{{ url('/detailproduct/'. $o->id)}}">{{$o->title}}</a>
                                         <p>{{$o->deskripsi}}</p>
                                     </div>
+=======
+                            <div class="item">
+                                <!-- Images -->
+                                <img class="img-1" style="height: 320px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2"
+                                    src="image/icon/{{ $c->icon_kategori}}" alt="">
+                                <!-- Overlay  -->
+                                <div class="overlay">
+                                    <!-- Price -->
+                                    <span class="price"><small>$</small>299</span>
+                                    <div class="position-center-center"> <a href="image/icon/{{ $c->icon_kategori}}" data-lighter><i class="icon-magnifier"></i></a> </div>
+                                </div>
+                                <!-- Item Name -->
+                                <div class="item-name"> <a href="{{ url('/detail_product') }}">{{ $c->nama_kategori}}</a>
+                                    <p>Lorem ipsum dolor sit amet</p>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                             @endforeach
