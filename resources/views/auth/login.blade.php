@@ -22,25 +22,25 @@
                         Login to continue
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <div class="wrap-input100">
                         <input class="input100 @error('email') is-invalid @enderror" type="text" name="email" id="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email" style="height: 100%;">
                         <span class="focus-input100"></span>
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <div class="wrap-input100">
                         <input id="password" class="input100 @error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Password" style="height: 100%;">
                         <span class="focus-input100"></span>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
 
                     <div class="flex-sb-m w-full p-t-3 p-b-32">
                         <div class="contact100-form-checkbox">
