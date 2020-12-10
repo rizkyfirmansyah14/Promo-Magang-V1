@@ -59,11 +59,12 @@
 
                                 <!-- Images Slider -->
                                 <div class="images-slider">
-                                    <ul class="slides">
+                                    <!-- <ul class="slides">
                                         <li data-thumb="{{asset('image/' . $d->image)}}"> <img class="img-responsive" src="{{asset('image/' . $d->image)}}" alt=""> </li>
                                         <li data-thumb="{{asset('image/' . $d->image)}}"> <img class="img-responsive" src="{{asset('image/' . $d->image)}}" alt=""> </li>
                                         <li data-thumb="{{asset('image/' . $d->image)}}"> <img class="img-responsive" src="{{asset('image/' . $d->image)}}" alt=""> </li>
-                                    </ul>
+                                    </ul> -->
+                                    <img class="img-responsive" src="{{asset('image/' . $d->image)}}" alt="">
                                 </div>
                             </div>
 
@@ -94,10 +95,6 @@
                                         </span>
                                     </li>
                                 </ul>
-
-                                <!-- Item Detail -->
-                                <p>{{ $d->deskripsi}}</p>
-
                                 @endforeach
 
                             </div>
@@ -115,30 +112,9 @@
                         <div class="tab-content animate fadeInUp" data-wow-delay="0.4s">
                             <!-- DESCRIPTION -->
                             <div role="tabpanel" class="tab-pane fade in active" id="descr">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed lectus id nisi interdum mollis. Nam congue tellus quis elit mattis congue. Aenean eu massa sed mauris hendrerit ornare sed eget ante.
-                                    Vestibulum id eros quam. Nunc volutpat at magna gravida eleifend. Phasellus sit amet nisi tempus, tincidunt elit ac, tempor metus. <br>
-                                </p>
-                                <h6>THE SIMPLE FACTS</h6>
-                                <ul>
-                                    <li>
-                                        <p>Praesent faucibus, leo vitae maximus dictum,</p>
-                                    </li>
-                                    <li>
-                                        <p> Donec porta ut lectus </p>
-                                    </li>
-                                    <li>
-                                        <p> Phasellus maximus velit id nisl</p>
-                                    </li>
-                                    <li>
-                                        <p> Quisque a tellus et sapien aliquam sus</p>
-                                    </li>
-                                    <li>
-                                        <p> Donec porta ut lectus </p>
-                                    </li>
-                                    <li>
-                                        <p> Phasellus maximus velit id nisl</p>
-                                    </li>
-                                </ul>
+                                @foreach($detail as $f)
+                                <p>{{$f->deskripsi}}</p>
+                                @endforeach
                             </div>
                         </div>
                     </div>
