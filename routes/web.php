@@ -18,6 +18,8 @@ Route::get('/', 'CategorysController@index');
 
 Route::get('/shop', 'ViewController@categoryView');
 
+Route::get('/product/{idkategori}', 'ViewController@cataloguePer');
+
 Route::get('/about', function () {
     return view('user/about');
 });

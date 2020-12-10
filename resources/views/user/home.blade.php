@@ -163,7 +163,7 @@
                                 <div class="item-img"> <img class="img-1" style="width: 300px;" src="image/popular/{{ $t->image}}" alt=""> <img class="img-2" src="image/popular/{{ $t->image}}" alt="">
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <div class="position-center-center"> <a href="#." class="btn btn-small btn-round">MORE</a> </div>
+                                        <div class="position-center-center"> <a href="{{ url('/product/'. $t->kategori_barang)}}" class="btn btn-small btn-round">MORE</a> </div>
                                     </div>
                                 </div>
                                 <!-- Item Name -->
@@ -195,7 +195,7 @@
 
                         <!-- Popular Item Slide -->
                         <div class="papular-block row" style="padding: 5%; margin-top: -70px;">
-                        @foreach($otherpromo as $o)
+                            @foreach($otherpromo as $o)
                             <!-- Item -->
                             <div class="col-md-3" style="margin-top: 35px;">
                                 <div class="item">

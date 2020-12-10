@@ -23,4 +23,10 @@ class ViewController extends Controller
 
         return view('user.shop', ['category' => $kategori, 'popular' => $popular, 'diskon' => Diskon::paginate(10)]);
     }
+
+    public function cataloguePer($idkategori)
+    {
+        $kategoridiskon = Diskon::where('kategori_barang', $idkategori)->get();
+        return view('user.catalogueper', ['kategoridiskon' => $kategoridiskon]);
+    }
 }
