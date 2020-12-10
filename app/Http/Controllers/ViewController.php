@@ -9,11 +9,6 @@ use App\PopularSlider;
 
 class ViewController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function detailProduct($id)
     {
         $diskon = Diskon::get();
