@@ -29,7 +29,7 @@
                             Catalogue
                         </a>
                     </li>
-                    <li class="dropdown {{ Request::is('contact') ? 'active' : '' }}">
+                    <li class="dropdown {{ Request::is('contact ') ? 'active' : '' }}">
                         <a href="{{ url('/contact')}}">
                             Contact
                         </a>
