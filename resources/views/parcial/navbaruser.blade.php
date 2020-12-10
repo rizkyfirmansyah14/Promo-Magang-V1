@@ -29,7 +29,7 @@
                             Catalogue
                         </a>
                     </li>
-                    <li class="dropdown {{ Request::is('catalogue') ? 'active' : '' }}">
+                    <li class="dropdown {{ Request::is('contact') ? 'active' : '' }}">
                         <a href="{{ url('/contact')}}">
                             Contact
                         </a>
@@ -38,7 +38,6 @@
                     <!-- Nav Right -->
                     <div class="nav-right">
                         <ul class="navbar-right">
-
                         </ul>
                     </div>
         </nav>

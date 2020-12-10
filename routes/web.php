@@ -19,15 +19,13 @@ Route::get('/detailproduct/{id}', 'ViewController@detailProduct');
 
 Route::get('/shop', 'ViewController@categoryView');
 
-<<<<<<< Updated upstream
 Route::get('/product/{idkategori}', 'ViewController@cataloguePer');
 
 Route::get('/about', function () {
     return view('user/about');
 });
-=======
+
 Route::get('/admin', 'UserController@viewLogin');
->>>>>>> Stashed changes
 
 Route::get('/', 'CategorysController@index');
 
