@@ -86,6 +86,13 @@
                                             @endforeach
                                         </span>
                                     </li>
+                                    <li>Date Promo Until Expired:
+                                        <span>
+                                            @foreach($detail as $b)
+                                            {{$b->tanggal_diskon}} - {{$b->tanggal_berakhir}}
+                                            @endforeach
+                                        </span>
+                                    </li>
                                 </ul>
 
                                 <!-- Item Detail -->
@@ -156,12 +163,16 @@
 
                         <!-- Item -->
                         <div class="item">
+                            <!-- Sale Tags -->
+                            <div class="on-sale" style="width: 55%; margin-right: px; height: 9%; margin-top: 86%; font-size: 13px;">
+                                Sampai {{$j->tanggal_berakhir}}
+                            </div>
                             <!-- Item img -->
                             <div class="item-img"> <img class="img-1" src="{{asset('image/' . $j->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $j->image)}}" alt="">
                                 <!-- Overlay -->
                                 <div class="overlay">
                                     <div class="position-center-center">
-                                        <div class="inn"><a href="{{asset('image/' . $j->image)}}" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#."><i class="icon-heart"></i></a></div>
+                                        <div class="inn"><a href="{{asset('image/' . $j->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
                                     </div>
                                 </div>
                             </div>

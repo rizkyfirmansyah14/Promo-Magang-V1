@@ -117,7 +117,7 @@
                         </div>
 
                         <!-- NEW ARRIVAL -->
-                        <div class="new-arrival-list">
+                        <div class="new-arrival-list" style="padding-top: 20%;">
                             <ul class="row">
 
                                 @foreach($category as $c)
@@ -125,7 +125,8 @@
                                 <li class="col-md-6">
 
                                     <!-- SHOP ITEM 1 -->
-                                    <article> <img class="img-responsive rounded border border border-light" src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori" style="width: 555px; height: 470px;">
+                                    <article style="width: 555px; height: 370px;" class="position-center-center">
+                                        <img class="img-responsive rounded border border border-light" src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori">
                                         <div class="position-center-center">
                                             <h4><a href="#.">{{$c->nama_kategori}}</a></h4>
                                             <a href="#." class="btn btn-small btn-round">MORE</a>
@@ -137,7 +138,7 @@
                             </ul>
 
                             <!-- SHOW MORE -->
-                            <div class="text-center margin-top-50"> <a href="#." class="btn btn-small btn-round"> SHOW
+                            <div class="text-center"> <a href="#." class="btn btn-small btn-round" style="margin-top: -20%;"> SHOW
                                     MORE...</a> </div>
                         </div>
                     </div>
@@ -195,10 +196,16 @@
 
                         <!-- Popular Item Slide -->
                         <div class="papular-block row" style="padding: 5%; margin-top: -70px;">
+
                             @foreach($otherpromo as $o)
+
                             <!-- Item -->
                             <div class="col-md-3" style="margin-top: 35px;">
                                 <div class="item">
+                                    <!-- Sale Tags -->
+                                    <div class="on-sale" style="width: 55%; margin-right: 15px; height: 10%; margin-top: 79%;">
+                                        Sampai {{$o->tanggal_berakhir}}
+                                    </div>
                                     <!-- Item img -->
                                     <div class="item-img"> <img class="img-1" src="{{asset('image/' . $o->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $o->image)}}" alt="">
                                         <!-- Overlay -->
@@ -210,7 +217,7 @@
                                     </div>
                                     <!-- Item Name -->
                                     <div class="item-name"> <a href="{{ url('/detailproduct/'. $o->id)}}">{{$o->title}}</a>
-                                        <p>{{$o->deskripsi}}</p>
+                                        <p>{{ substr($o->deskripsi, 0, 80) . '...'}}</p>
                                     </div>
                                 </div>
                             </div>
