@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemSlidersTable extends Migration
+class CreateFeedbackTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateItemSlidersTable extends Migration
      */
     public function up()
     {
-        Schema::create('item_sliders', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->integer('kategori_barang');
-            $table->string('deskripsi');
-            $table->integer('price');
-            $table->string('image');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('subject');
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateItemSlidersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_sliders');
+        Schema::dropIfExists('feedback');
     }
 }

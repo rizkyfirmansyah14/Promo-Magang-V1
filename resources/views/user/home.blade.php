@@ -35,7 +35,7 @@
                                 <li class="active"> <a href="{{ url('/')}}">home</a></li>
                                 <li> <a href="{{ url('/about') }}">about</a> </li>
                                 <li> <a href="{{ url('/shop')}}">catalogue</a> </li>
-                                <li> <a href="contact.html">contact</a> </li>
+                                <li> <a href="{{ url('/contact')}}">contact</a> </li>
                             </ul>
                         </nav>
                     </div>
