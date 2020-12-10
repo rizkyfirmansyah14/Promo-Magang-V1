@@ -28,11 +28,24 @@
             @include('parcial.navbaruser')
         </header>
 
+        <!--======= SUB BANNER =========-->
+        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1572061486732-b528a9b293a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2t8ZW58MHwwfDB8YmxhY2s%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+            <div class="position-center-center">
+                <div class="container">
+                    <h4>CATALOGUE.</h4>
+                    <ol class="breadcrumb">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li class="active">Catalogue</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
         <!-- Content -->
         <div id="content">
 
             <!-- Products -->
-            <section class="shop-page padding-bottom-100">
+            <section class="shop-page padding-top-100 padding-bottom-100">
                 <div class="container">
                     <div class="row">
 
@@ -45,7 +58,7 @@
 
                                 @foreach($category as $c)
                                 <ul class="shop-cate">
-                                    <li><a href="#.">{{$c->kategori_barang}}</a></li>
+                                    <li><a href="{{ url('/product/'. $c->id)}}">{{$c->kategori_barang}}</a></li>
                                 </ul>
                                 @endforeach
 

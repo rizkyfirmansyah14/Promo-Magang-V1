@@ -27,11 +27,25 @@
         <header>
             @include('parcial.navbaruser')
         </header>
+
+        <!--======= SUB BANNER =========-->
+        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1582043568328-69ce6fea1a7b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGRldGFpbHxlbnwwfDB8MHxibGFjaw%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+            <div class="position-center-center">
+                <div class="container">
+                    <h4>DETAIL PROMO.</h4>
+                    <ol class="breadcrumb">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li class="active">Detail Promo</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
         <!-- Content -->
         <div id="content">
 
             <!-- Popular Products -->
-            <section class="padding-bottom-100">
+            <section class="padding-top-100 padding-bottom-100">
                 <div class="container">
 
                     <!-- SHOP DETAIL -->
