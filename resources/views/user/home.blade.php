@@ -93,7 +93,7 @@
                                 <span style="color: #FFE600;">search</span> promo
                                 from <span style="color: #FFE600;">home</span>
                             </h1>
-                            <div class="text-center"> <a href="{{ url('/shop')}}" class="btn btn-round margin-top-40">SHOP NOW</a>
+                            <div class="text-center"> <a href="{{ url('/shop')}}" class="btn btn-round margin-top-40">SHOW MORE</a>
                             </div>
                         </div>
 
@@ -198,7 +198,6 @@
                         <div class="papular-block row" style="padding: 5%; margin-top: -70px;">
 
                             @foreach($otherpromo as $o)
-
                             <!-- Item -->
                             <div class="col-md-3" style="margin-top: 35px;">
                                 <div class="item">
@@ -223,6 +222,10 @@
                             </div>
                             @endforeach
 
+                        </div>
+
+                        <div style="margin-right: 6%;">
+                            {{$otherpromo->links()}}
                         </div>
                     </section>
                 </div>

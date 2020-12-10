@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Diskon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class CategorysController extends Controller
     {
         $category = DB::table('kategoris')->get();
         $toppromo = DB::table('popular_sliders')->get();
-        $otherpromo = DB::table('diskons')->get();
+        $otherpromo = Diskon::paginate(8);
 
         return view('user.home', compact('category', 'toppromo', 'otherpromo'));
     }

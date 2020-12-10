@@ -94,7 +94,8 @@
                                                 </div>
                                             </div>
                                             <!-- Item Name -->
-                                            <div class="item-name"> <a href="{{ url('/detailproduct/'. $d->id)}}">{{$d->title}}</a>
+                                            <div class="item-name">
+                                                <a href="{{ url('/detailproduct/'. $d->id)}}">{{ substr($d->title, 0, 25). '...'}}</a>
                                                 <p>{{ substr($d->deskripsi, 0, 50). '...'}}</p>
                                             </div>
                                         </div>
