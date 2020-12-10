@@ -32,8 +32,8 @@
         <section class="sub-bnr" data-stellar-background-ratio="0.5">
             <div class="position-center-center">
                 <div class="container">
-                    <h4>ABOUT PAVSHOP</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
+                    <h4>ABOUT MALL PROMO</h4>
+                    <p class="text-monospace text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula.
                         Sed feugiat, tellus vel tristique posuere, diam</p>
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
@@ -59,7 +59,7 @@
                             </div>
 
                             <!-- IMG -->
-                            <img class="img-responsive margin-top-80 margin-bottom-80" src="asset/images/about-img.jpg" alt="">
+                            <img class="img-responsive margin-top-80 margin-bottom-80" src="asset/images/banner.jpg" alt="">
                             <div class="vision-text">
                                 <div class="col-lg-5">
                                     <h5 class="text-left">our vision</h5>
@@ -79,10 +79,10 @@
             <!-- Culture BLOCK -->
             <section class="cultur-block">
                 <ul>
-                    <li> <img src="asset/images/cultur-img-1.jpg" alt=""> </li>
-                    <li> <img src="asset/images/cultur-img-2.jpg" alt=""> </li>
-                    <li> <img src="asset/images/cultur-img-3.jpg" alt=""> </li>
-                    <li> <img src="asset/images/cultur-img-4.jpg" alt=""> </li>
+                    <li> <img src="asset/images/culture (1).jpg" alt=""> </li>
+                    <li> <img src="asset/images/culture (2).jpg" alt=""> </li>
+                    <li> <img src="asset/images/culture (3).jpg" alt=""> </li>
+                    <li> <img src="asset/images/culture (4).jpg" alt=""> </li>
                 </ul>
 
                 <!-- Culture Text -->
@@ -98,7 +98,7 @@
             </section>
 
             <!-- Video -->
-            <section class="video-block"> <img class="img-responsive" src="asset/images/video-img.jpg" alt="">
+            <section class="video-block"> <img class="img-responsive" src="asset/images/shoping.jpg" alt="">
                 <div class="position-center-center"> <a href="#"> <i class="icon-camcorder"></i>watch video </a> </div>
             </section>
 
@@ -117,7 +117,7 @@
                         <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.4s">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-1.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (1).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -137,7 +137,7 @@
                         <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.6s">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-2.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (2).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -157,7 +157,7 @@
                         <li class="col-md-4 text-center animate fadeInUp" data-wow-delay="0.8s">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-3.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (3).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -177,7 +177,7 @@
                         <li class="col-md-4 text-center">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-4.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (4).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -197,7 +197,7 @@
                         <li class="col-md-4 text-center">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-5.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (1).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -217,7 +217,7 @@
                         <li class="col-md-4 text-center">
                             <article>
                                 <!-- abatar -->
-                                <div class="avatar"> <img class="img-circle" src="asset/images/team-6.jpg" alt="">
+                                <div class="avatar"> <img class="img-circle" src="asset/images/people (3).jpg" alt="">
                                     <!-- Team hover -->
                                     <div class="team-hover">
                                         <div class="position-center-center">
@@ -255,10 +255,10 @@
                         <span>We are proud that we have awesome sponsors</span>
                     </div>
                     <ul class="clients-img">
-                        <li> <img class="img-responsive" src="asset/images/c-img-1.jpg" alt=""> </li>
-                        <li> <img class="img-responsive" src="asset/images/c-img-2.jpg" alt=""> </li>
-                        <li> <img class="img-responsive" src="asset/images/c-img-3.jpg" alt=""> </li>
-                        <li> <img class="img-responsive" src="asset/images/c-img-4.jpg" alt=""> </li>
+                        <li> <img class="img-responsive" src="asset/images/tokopedia.png" alt=""> </li>
+                        <li> <img class="img-responsive" src="asset/images/bukalapak.png" alt=""> </li>
+                        <li> <img class="img-responsive" src="asset/images/shopee.png" alt=""> </li>
+                        <li> <img class="img-responsive" src="asset/images/lazada.svg" alt=""> </li>
                     </ul>
                 </div>
             </section>

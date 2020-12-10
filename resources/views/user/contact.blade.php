@@ -31,7 +31,7 @@
         </header>
 
         <!--======= SUB BANNER =========-->
-
+        <!-- HOME MAIN  -->
         <section class="home-slider simple-head" data-stellar-background-ratio="0.5">
 
             <!-- Container Fluid -->
@@ -40,17 +40,17 @@
 
                     <!-- Header Text -->
                     <div class="col-lg-7 col-lg-offset-5" style="position: relative; margin-top: -60px;">
-                        <h4>Please review us <span style="color: #FFE600;">BELLOW </span></h4>
+                        <h4>please leave a <span style="color: #FFE600;">review</span></h4>
                         <h1 class="extra-huge-text" style="color: black; font-size: 90px;">
-                            <span style="color: #FFE600;">your</span> reviews are
-                            very <span style="color: #FFE600;">helpful</span>
+                            <span style="color: #FFE600;">your</span> review
+                            is <span style="color: #FFE600;">very help</span>ful
                         </h1>
+                       
                     </div>
-                </div>
 
+                </div>
             </div>
-    </div>
-    </section>
+        </section>
 
     <!-- Content -->
     <div id="content">
