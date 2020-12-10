@@ -2,7 +2,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('asset/rs-plugin/css/settings.css')}}" media="screen" />
 
 <!-- Bootstrap Core CSS -->
-<link href="{{ asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
+<!-- <link href="{{ asset('asset/css/bootstrap.min.css')}}" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Custom CSS -->
 <link href="{{ asset('asset/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
