@@ -68,7 +68,7 @@ class KategoriBarangController extends Controller
     public function editKat(Request $request)
     {
         if ($_POST["action"] == "Edit") {
-            if ($request->icon_kategori == null) {
+            if ($request->gambar_kategori == null) {
                 $idkategori = $request->id;
                 $kategoribarang = KategoriBarang::find($idkategori);
                 $kategoribarang->kategori_barang = $request->kategori_barang;

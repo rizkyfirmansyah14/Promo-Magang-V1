@@ -160,7 +160,7 @@
                             <!-- Item -->
                             <div class="item">
                                 <!-- Item img -->
-                                <div class="item-img"> <img class="img-1" style="width: 300px;" src="image/popular/{{ $t->image}}" alt=""> <img class="img-2" src="image/popular/{{ $t->image}}" alt="">
+                                <div class="item-img"> <img class="img-1" style="width: 100%;" src="image/popular/{{ $t->image}}" alt=""> <img class="img-2" src="image/popular/{{ $t->image}}" alt="">
                                     <!-- Overlay -->
                                     <div class="overlay">
                                         <div class="position-center-center"> <a href="{{ url('/product/'. $t->kategori_barang)}}" class="btn btn-small btn-round">MORE</a> </div>
