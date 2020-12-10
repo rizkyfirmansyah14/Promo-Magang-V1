@@ -54,7 +54,7 @@
 
                                 @foreach($popular as $p)
                                 <ul class="shop-tags">
-                                    <li><a href="#.">{{$p->title}}</a></li>
+                                    <li><a href="{{ url('/product/'. $p->kategori_barang)}}">{{$p->title}}</a></li>
                                 </ul>
                                 @endforeach
 

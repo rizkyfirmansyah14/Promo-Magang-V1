@@ -1,5 +1,7 @@
-<script src="{{ asset('asset/js/jquery-1.11.3.min.js')}}"></script>
-<script src="{{ asset('asset/js/bootstrap.min.js')}}"></script>
+<!-- <script src="{{ asset('asset/js/jquery-1.11.3.min.js')}}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src="{{ asset('asset/js/bootstrap.min.js')}}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="{{ asset('asset/js/own-menu.js')}}"></script>
 <script src="{{ asset('asset/js/jquery.lighter.js')}}"></script>
 <script src="{{ asset('asset/js/owl.carousel.min.js')}}"></script>
