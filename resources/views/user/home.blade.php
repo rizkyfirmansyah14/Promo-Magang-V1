@@ -195,22 +195,23 @@
 
                         <!-- Popular Item Slide -->
                         <div class="papular-block row" style="padding: 5%; margin-top: -70px;">
-
-                            @foreach($otherpromo as $o)
+                        @foreach($otherpromo as $o)
                             <!-- Item -->
-                            <div class="item">
-                                <!-- Images -->
-                                <img class="img-1" style="height: 320px;" src="image/icon/{{ $c->icon_kategori}}" alt=""> <img class="img-2"
-                                    src="image/icon/{{ $c->icon_kategori}}" alt="">
-                                <!-- Overlay  -->
-                                <div class="overlay">
-                                    <!-- Price -->
-                                    <span class="price"><small>$</small>299</span>
-                                    <div class="position-center-center"> <a href="image/icon/{{ $c->icon_kategori}}" data-lighter><i class="icon-magnifier"></i></a> </div>
-                                </div>
-                                <!-- Item Name -->
-                                <div class="item-name"> <a href="{{ url('/detail_product') }}">{{ $c->nama_kategori}}</a>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                            <div class="col-md-3" style="margin-top: 35px;">
+                                <div class="item">
+                                    <!-- Item img -->
+                                    <div class="item-img"> <img class="img-1" src="{{asset('image/' . $o->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $o->image)}}" alt="">
+                                        <!-- Overlay -->
+                                        <div class="overlay">
+                                            <div class="position-center-center">
+                                                <div class="inn"><a href="{{asset('image/' . $o->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Name -->
+                                    <div class="item-name"> <a href="{{ url('/detailproduct/'. $o->id)}}">{{$o->title}}</a>
+                                        <p>{{$o->deskripsi}}</p>
+                                    </div>
                                 </div>
                             </div>
                             @endforeach
