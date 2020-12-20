@@ -129,7 +129,7 @@
                                         <img class="img-responsive rounded border border border-light" src="image/icon/{{ $c->icon_kategori}}" alt="icon kategori">
                                         <div class="position-center-center">
                                             <h4><a href="#.">{{$c->nama_kategori}}</a></h4>
-                                            <a href="#." class="btn btn-small btn-round">MORE</a>
+                                            <a href="/shop/{{ $c->id }}" class="btn btn-small btn-round">MORE</a>
                                         </div>
                                     </article>
 
@@ -164,7 +164,7 @@
                                 <div class="item-img"> <img class="img-1" style="width: 100%;" src="image/popular/{{ $t->image}}" alt=""> <img class="img-2" src="image/popular/{{ $t->image}}" alt="">
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <div class="position-center-center"> <a href="{{ url('/product/'. $t->kategori_barang)}}" class="btn btn-small btn-round">MORE</a> </div>
+                                        <div class="position-center-center"> <a href="/product/{{$t->kategori_barang}}" class="btn btn-small btn-round">MORE</a> </div>
                                     </div>
                                 </div>
                                 <!-- Item Name -->
@@ -199,12 +199,9 @@
 
                             @foreach($otherpromo as $o)
                             <!-- Item -->
+                            
                             <div class="col-md-3" style="margin-top: 35px;">
-                                <div class="item">
-                                    <!-- Sale Tags -->
-                                    <div class="on-sale" style="width: 55%; margin-right: 15px; height: 10%; margin-top: 79%;">
-                                        Sampai {{$o->tanggal_berakhir}}
-                                    </div>
+                                <div class="item"
                                     <!-- Item img -->
                                     <div class="item-img"> <img class="img-1" src="{{asset('image/' . $o->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $o->image)}}" alt="">
                                         <!-- Overlay -->
@@ -213,11 +210,18 @@
                                                 <div class="inn"><a href="{{asset('image/' . $o->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
                                             </div>
                                         </div>
+                                          <!-- sale tag -->
+                                    <div style="margin-top: 10px;" class="on-sale"><span class="circle"></span>
+                                        <a href="{{ url('/detailproduct/'. $o->id)}}">Sampai {{$o->tanggal_berakhir}}</a>
                                     </div>
+
+                                    </div>
+                                    
                                     <!-- Item Name -->
                                     <div class="item-name"> <a href="{{ url('/detailproduct/'. $o->id)}}">{{$o->title}}</a>
                                         <p>{{ substr($o->deskripsi, 0, 80) . '...'}}</p>
                                     </div>
+                                    
                                 </div>
                             </div>
                             @endforeach

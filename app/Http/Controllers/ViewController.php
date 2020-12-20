@@ -16,6 +16,12 @@ class ViewController extends Controller
         return view('user.product-detail', ['detail' => $detailbarang, 'diskon' => $diskon]);
     }
 
+    public function categoryPer($show)
+    {
+        $kategoridiskon = Diskon::where('kategori_diskon', $show)->get();
+        return view('user.catalogueper', ['kategoridiskon' => $kategoridiskon]);
+    }
+
     public function categoryView()
     {
         $kategori = KategoriBarang::get();

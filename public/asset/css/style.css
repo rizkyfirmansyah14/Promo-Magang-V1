@@ -1789,7 +1789,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .papular-block .overlay {
-    background: rgba(255, 255, 21, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -1924,19 +1924,97 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .on-sale {
-    background: #ffe115;
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: 0px;
-    right: 0px;
-    z-index: 99;
-    text-align: center;
-    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
     font-weight: bold;
-    line-height: 16px;
-    font-size: 18px;
-    padding-top: 10px;
+    position: relative !important;
+    background: #f7e604;
+    float: left;
+    padding: 7px 3px;
+    margin: 0 5px 5px 0;
+}
+
+.on-sale:after {
+    content: "";
+    position: absolute !important;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border-right: #fff 7px solid;
+    border-bottom: #fff 7px solid;
+    -moz-border-radius: 0 0 20px 0;
+    -webkit-border-radius: 0 0 20px 0;
+    border-radius: 0 0 20px 0;
+}
+ 
+.on-sale:before {
+    content: "";
+    position: absolute !important;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    border-left: #fff 7px solid;
+    border-bottom: #fff 7px solid;
+    -moz-border-radius: 0 0 0 20px;
+    -webkit-border-radius: 0 0 0 20px;
+    border-radius: 0 0 0 20px;
+}
+
+.on-sale a {
+    outline: 1px rgba(255,255,255,0.4) dashed;
+    border: 1px rgba(0,0,0,0.3) dashed;
+    padding: 4px 10px 4px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+}
+ 
+.on-sale a:hover {color: rgba(0,0,0,0.5);}
+
+.on-sale a:after {
+    content: "";
+    position: absolute !important;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    border-right: #fff 7px solid;
+    border-top: #fff 7px solid;
+    -moz-border-radius: 0 20px 0 0;
+    -webkit-border-radius: 0 20px 0 0;
+    border-radius: 0 20px 0 0;
+}
+ 
+.on-sale a:before {
+    content: "";
+    position: absolute !important;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    border-left: #fff 7px solid;
+    border-top: #fff 7px solid;
+    -moz-border-radius: 20px 0 0 0;
+    -webkit-border-radius: 20px 0 0 0;
+    border-radius: 20px 0 0 0;
+}
+
+.on-sale .circle{
+    position: absolute !important;
+    z-index: 100;
+    border: 5px #fff solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 8px;
+    -moz-box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+        0 1px 0 rgba(255,255,255,0.3);
+    -webkit-box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+        0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.5),
+        0 1px 0 rgba(255,255,255,0.3);
 }
 
 .on-sale span {

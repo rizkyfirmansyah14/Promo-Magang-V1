@@ -15,19 +15,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+// User
+
+
+Route::get('/', 'CategorysController@index');
+
+Route::get('/admin', 'UserController@viewLogin');
+
 Route::get('/detailproduct/{id}', 'ViewController@detailProduct');
 
-Route::get('/shop', 'ViewController@categoryView');
-
 Route::get('/product/{idkategori}', 'ViewController@cataloguePer');
+
+Route::get('/shop/{shop}', 'ViewController@categoryPer');
+
+Route::get('/shop', 'ViewController@categoryView');
 
 Route::get('/about', function () {
     return view('user/about');
 });
-
-Route::get('/admin', 'UserController@viewLogin');
-
-Route::get('/', 'CategorysController@index');
 
 Route::get('/shopping_cart', function () {
     return view('user/shopping-cart');
@@ -41,7 +46,6 @@ Route::get('/contact', function () {
     return view('user/contact');
 });
 
-
 Route::get('/about', function () {
     return view('user/about');
 });
@@ -49,6 +53,7 @@ Route::get('/about', function () {
 
 
 
+// Admin
 
 Auth::routes();
 
@@ -60,6 +65,11 @@ Route::get('/admin/datakategori', 'AdminController@viewCat')->name('datakategori
 Route::get('/admin/datarole', 'AdminController@viewRole')->name('datarole');
 Route::get('/admin/datakategoribarang', 'AdminController@viewKtBarang')->name('databarang');
 Route::get('/admin/datapopular', 'AdminController@viewPopular')->name('datapopular');
+
+// Route CRUD Feedback
+Route::post('/admin/feedback', 'FeedbacksController@store');
+Route::get('/admin/feedback', 'AdminController@viewfeedback')->name('feedback');
+Route::get('admin/feedback/delete/{id}','FeedbacksController@destroy');
 
 // Route CRUD user
 Route::get('/admin/getuser', 'UserController@dataUser')->name('getuser');

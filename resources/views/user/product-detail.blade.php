@@ -139,10 +139,6 @@
 
                         <!-- Item -->
                         <div class="item">
-                            <!-- Sale Tags -->
-                            <div class="on-sale" style="width: 55%; margin-right: px; height: 9%; margin-top: 86%; font-size: 13px;">
-                                Sampai {{$j->tanggal_berakhir}}
-                            </div>
                             <!-- Item img -->
                             <div class="item-img"> <img class="img-1" src="{{asset('image/' . $j->image)}}" alt=""> <img class="img-2" src="{{asset('image/' . $j->image)}}" alt="">
                                 <!-- Overlay -->
@@ -151,6 +147,9 @@
                                         <div class="inn"><a href="{{asset('image/' . $j->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
                                     </div>
                                 </div>
+                                <div class="on-sale"><span class="circle"></span>
+                                        <a href="#">Sampai {{$j->tanggal_berakhir}}</a>
+                                    </div>
                             </div>
                             <!-- Item Name -->
                             <div class="item-name"> <a href="{{ url('/detailproduct/'. $j->id)}}">{{$j->title}}</a>

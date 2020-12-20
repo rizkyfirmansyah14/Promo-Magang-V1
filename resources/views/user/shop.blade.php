@@ -29,7 +29,7 @@
         </header>
 
         <!--======= SUB BANNER =========-->
-        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('https://images.unsplash.com/photo-1572061486732-b528a9b293a3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2t8ZW58MHwwfDB8YmxhY2s%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+        <section class="sub-bnr" data-stellar-background-ratio="0.5" style="background-image: url('asset/images/catalog.jpg');">
             <div class="position-center-center">
                 <div class="container">
                     <h4>CATALOGUE.</h4>
@@ -92,7 +92,13 @@
                                                         <div class="inn"><a href="{{ asset('image/' . $d->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                  <!-- sale tag -->
+                                                     <div style="margin-top: 10px;" class="on-sale"><span class="circle"></span>
+                                                        <a href="{{ url('/detailproduct/'. $d->id)}}">Sampai {{$d->tanggal_berakhir}}</a>
+                                                     </div>
+                                                </div>
+
+
                                             <!-- Item Name -->
                                             <div class="item-name">
                                                 <a href="{{ url('/detailproduct/'. $d->id)}}">{{ substr($d->title, 0, 25). '...'}}</a>

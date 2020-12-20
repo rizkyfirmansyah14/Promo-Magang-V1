@@ -66,10 +66,14 @@
                                             <div class="inn"><a href="{{ asset('image/'. $k->image)}}" data-lighter><i class="icon-magnifier"></i></a></div>
                                         </div>
                                     </div>
-                                </div>
+                                      <!-- sale tag -->
+                                    <div style="margin-top: 10px;" class="on-sale"><span class="circle"></span>
+                                        <a href="{{ url('/detailproduct/'. $k->id)}}">Sampai {{$k->tanggal_berakhir}}</a>
+                                    </div>
+                                </div>        
                                 <!-- Item Name -->
-                                <div class="item-name"> <a href="#.">{{$k->title}}</a>
-                                    <p>{{$k->deskripsi}}</p>
+                                <div class="item-name"> <a href="{{ url('/detailproduct/'. $k->id)}}">{{$k->title}}</a>
+                                    <p>{{ substr($k->deskripsi, 0, 30) . '...'}}</p>
                                 </div>
                             </div>
                         </div>

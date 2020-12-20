@@ -46,6 +46,10 @@
                      <a href="{{ route('datapopular')}}">
                          <i class="far fa-check-square"></i>Top Promo Slider</a>
                  </li>
+                 <li class="{{ Request::is('admin/feedback') ? 'active' : '' }}">
+                     <a href="{{ route('feedback')}}">
+                         <i class="far fa-check-square"></i>Feedback</a>
+                 </li>
                  @else
                  <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }} has-sub">
                      <a class="js-arrow" href="{{ route('dashboard')}}">

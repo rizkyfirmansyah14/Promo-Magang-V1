@@ -9,6 +9,7 @@ use App\Diskon;
 use App\KategoriBarang;
 use App\PopularSlider;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -79,5 +80,11 @@ class AdminController extends Controller
         $ktbarang = KategoriBarang::get();
 
         return view('admin.datapopular', ['kategoribarang' => $ktbarang]);
+    }
+    public function Viewfeedback()
+    {
+        $feed = DB::table('feedback')->get();
+
+        return view('admin.feedback', compact('feed'));
     }
 }

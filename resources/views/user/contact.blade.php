@@ -67,7 +67,14 @@
                             <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
 
                             <!--======= FORM  =========-->
-                            <form role="form" id="contact_form" class="contact-form" action="" method="post" onSubmit="return false">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>{{ $message }}</strong>
+                                </div>
+                            @endif
+
+                            <form role="form" id="contact_form" class="contact-form" action="{{ url('admin/feedback') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <ul class="row">
                                     <li class="col-sm-6">
@@ -96,7 +103,7 @@
                                         </label>
                                     </li>
                                     <li class="col-sm-12">
-                                        <button type="submit" value="submit" class="btn" id="btn_submit" onClick="proceed();">SEND MAIL</button>
+                                        <button type="submit" value="submit" class="btn" id="btn_submit">SEND MAIL</button>
                                     </li>
                                 </ul>
                             </form>
